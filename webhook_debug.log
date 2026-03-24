@@ -1,0 +1,1258 @@
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.3125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'id': '17841465168913962', 'time': 12345678, 'changes': [{'field': 'comments', 'value': {'from': {'id': 'target_user_id', 'username': 'test_user'}, 'media': {'id': 'media_123'}, 'id': 'comment_123', 'text': 'send it'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.484375, system=0.140625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'id': '17841465168913962', 'time': 12345678, 'changes': [{'field': 'comments', 'value': {'from': {'id': 'target_user_id', 'username': 'test_user'}, 'media': {'id': 'media_123'}, 'id': 'comment_123', 'text': 'send it'}}]}]}
+
+>>> GLOBAL LOG: HEAD /api/webhook
+
+>>> GLOBAL LOG: GET /api/webhook
+
+>>> GLOBAL LOG: GET /api/webhook
+
+>>> GLOBAL LOG: HEAD /api/webhook
+
+>>> GLOBAL LOG: GET /api/webhook
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /
+
+!!! CATCH-ALL LOG: GET / !!!
+{'method': 'GET', 'path': '', 'body': 'not json'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=3.96875, system=0.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '0', 'time': 1774103352, 'changes': [{'field': 'comments', 'value': {'from': {'id': '232323232', 'username': 'test', 'self_ig_scoped_id': '232323232'}, 'media': {'id': '123123123', 'media_product_type': 'FEED'}, 'id': '17865799348089039', 'parent_id': '1231231234', 'text': 'This is an example.'}}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=4.296875, system=0.625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774103543, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18097984819978215', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.296875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774103753, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18099970687766961', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.1875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774104066, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18105396400848714', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.15625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774104301, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17952905436106433', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5, system=0.25, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774115662, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18059160164690316', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+>>> GLOBAL LOG: POST /api/webhook
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774115667, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18085504901005035', 'parent_id': '18059160164690316', 'text': 'Check your DM or message us INFO 🚀'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774115880, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17859447033671665', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.796875, system=0.484375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774115885, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18001154669857808', 'parent_id': '17859447033671665', 'text': 'Check your DM or message us INFO 🚀'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.0, system=0.65625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774116074201, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774116072561, 'postback': {'title': '✅ Yes, I followed', 'payload': 'CHECK_FOLLOW_17922535773060815', 'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNjY2NTE0NzU4OTQyODUxNTMzNzk3MDMxMTQ5NTY4MAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.03125, system=0.65625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774116092, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18127933108493255', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.15625, system=0.9375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774116097, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18085806902206838', 'parent_id': '18127933108493255', 'text': 'Check your DM or message us INFO 🚀'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.1875, system=0.984375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774116146, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '17912358141347419', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.28125, system=1.28125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774116158, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18090554930174156', 'parent_id': '17912358141347419', 'text': 'Check your DM or message us INFO 🚀'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.53125, system=0.125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774117701, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18098228443968850', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.609375, system=0.5, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774117704, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '17922535773060815', 'media_product_type': 'REELS'}, 'id': '18200798485337872', 'parent_id': '18098228443968850', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.796875, system=0.578125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774117892539, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774117892128, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNjY5ODcxMjY4NzE5Njc0MjI3MzYwNjQ3NDUzMDgxNgZDZD', 'text': 'INFO'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.609375, system=0.359375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774181770, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17990301881782910', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.734375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774181775, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18142960921439004', 'parent_id': '17990301881782910', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774181952, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18083733734036094', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.625, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774181986, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18368511100162766', 'parent_id': '18083733734036094', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.640625, system=0.703125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774182007577, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774182006995, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzg4MTQyMzIxNzQxMTIwMTkzNzUzMTE5NzE5NDI0MAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.921875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774182014300, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774182013885, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzg4MTU1MDMyMjk4NTY5NDYzNDM0MTYxODk0MTk1MgZDZD', 'text': 'YES'}}]}]}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/login
+
+!!! CATCH-ALL LOG: GET /api/auth/login !!!
+{'method': 'GET', 'path': 'api/auth/login', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/config/permissions
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.296875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774183970, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18575819617014476', 'parent_id': '18083733734036094', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.53125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774183976, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17872953915565306', 'parent_id': '18083733734036094', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.578125, system=0.28125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774184182, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18108128113867537', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5625, system=0.265625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774184311, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17935125765198746', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.640625, system=0.578125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774184315, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18261319789290438', 'parent_id': '17935125765198746', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.5, system=0.34375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774184908452, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774184907989, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzkzNDkzNzEyMzAzOTE0NDg3OTQ2NDg4Nzg3NzYzMgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.640625, system=0.75, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774184990740, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774184990264, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzkzNjQ1NDgyNzY3MTg3NzQ3OTg4NTU1NDMxOTM2MAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.75, system=0.90625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774185053, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18112248322772049', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.765625, system=1.265625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774185058, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18107242690829274', 'parent_id': '18112248322772049', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.625, system=0.234375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774185537119, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774185486125, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk0NTYwMTgzOTAyNDI1NzUwOTQ1NjczOTMwMzQyNAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: GET /api/auth/instagram/login
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.0, system=0.4375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774185737500, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774185736983, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MDIyOTM1NDcyODczMDEyNTY2NDU1Nzk4OTg4OAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+!!! CATCH-ALL LOG: GET /api/auth/facebook/callback !!!
+{'method': 'GET', 'path': 'api/auth/facebook/callback', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.609375, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774185854138, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774185853703, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MjM4MjQ2MjQyMzI1NTgwNzQxODUwNjkzNjMyMAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774185893096, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774185892576, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MzA5OTU1MzE4MzM4Mzc1MjY4NTUwMTAyMjIwOAZDZD', 'text': 'No'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.4375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774185901598, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774185901076, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MzI1NjM0NDE2MjMzMDMyMjUxODE1MTI2NjMwNAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.40625, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186059480, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186059074, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1NjE3MDg5MDE5NDYwMzg4MTcxMzkxMDE1MzIxNgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.328125, system=0.171875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186130171, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186129780, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1NzQ3NTE4NDgxNDA4MjYxNzgwNjEyMjEyMzI2NAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.375, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186212919, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186212880, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1NzQ3NTE4NDgxNDA4MjYxNzgwNjEyMjEyMzI2NAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.375, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186215318, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186215287, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1NjE3MDg5MDE5NDYwMzg4MTcxMzkxMDE1MzIxNgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.390625, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186217595, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186217531, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MzI1NjM0NDE2MjMzMDMyMjUxODE1MTI2NjMwNAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.390625, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186219957, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186219937, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MzA5OTU1MzE4MzM4Mzc1MjY4NTUwMTAyMjIwOAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.84375, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186491196, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186491175, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MjM4MjQ2MjQyMzI1NTgwNzQxODUwNjkzNjMyMAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.875, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186506473, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186506448, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk1MDIyOTM1NDcyODczMDEyNTY2NDU1Nzk4OTg4OAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.875, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186513213, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186513192, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk0NTYwMTgzOTAyNDI1NzUwOTQ1NjczOTMwMzQyNAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.90625, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186521019, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186521006, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzkzNjQ1NDgyNzY3MTg3NzQ3OTg4NTU1NDMxOTM2MAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.9375, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186522995, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186522969, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzg4MTU1MDMyMjk4NTY5NDYzNDM0MTYxODk0MTk1MgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.953125, system=0.46875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186528815, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186528789, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzkzNDkzNzEyMzAzOTE0NDg3OTQ2NDg4Nzg3NzYzMgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.359375, system=0.234375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186540057, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186540032, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzg4MTQyMzIxNzQxMTIwMTkzNzUzMTE5NzE5NDI0MAZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.515625, system=0.265625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186681474, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186680985, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk2NzY0MzEyMDMxNTE5NjM1NDk0OTE0OTYyMjI3MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.4375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186692531, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186691907, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk2Nzg0NDYwNzkyMTA1NDIxOTY4ODc1MTM5ODkxMgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.609375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186734271, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186734235, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNjY5ODcxMjY4NzE5Njc0MjI3MzYwNjQ3NDUzMDgxNgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.328125, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186754171, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186754136, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk2Nzg0NDYwNzkyMTA1NDIxOTY4ODc1MTM5ODkxMgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.359375, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186757629, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186757603, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk2NzY0MzEyMDMxNTE5NjM1NDk0OTE0OTYyMjI3MgZDZD', 'is_deleted': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.421875, system=0.28125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774186887336, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774186886838, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk3MTQ0MDQ0NDQxNjI1NTYwMTIyMzcyMDIzOTEwNAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.46875, system=0.25, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774187009668, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774187009267, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk3MzY5ODg2MDg2NDkwMjUzMTk5MjIyNTA1NDcyMAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774187020672, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774187020323, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk3MzkwMjc5NzM4NjcxNjY0NjExNzA2MTE2NTA1NgZDZD', 'text': '.'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.40625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774187026500, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774187026070, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk3NDAwODgxNzQ4NDE4Mjg2NTUxOTM0NjQ1MDQzMgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.53125, system=0.234375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774187130597, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774187130167, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk3NTkyOTA2MTMwMjk0MTUyNTE0NjU0NDg5ODA0OAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.203125, system=0.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774188078, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18089328205943463', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.296875, system=0.859375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774188085, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18062328764675551', 'parent_id': '18089328205943463', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.375, system=0.28125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774188211, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18087443849191197', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.65625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774188217, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18111264961753418', 'parent_id': '18087443849191197', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.328125, system=0.234375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774188352701, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774188351935, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjcyNzk5ODQ2NjcwMjcxMzQ3NTMxMTc5NDUxNjkxODI3MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.75, system=0.296875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774332679017, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774332678015, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY2MDgxMjk3NzIxMjAwOTU5MzMzOTY5MjE4NzY0OAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.078125, system=0.421875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774333806722, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774333806177, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4MTYyMzg5NTM5MDAwNDM1ODQ2MDY5MTQ0NzgwOAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.421875, system=0.3125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774333939661, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774333939209, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NDA3Nzg5NDY2MDE3NzkwMzYxNTAzNTMxMDA4MAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.78125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774333976455, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774333975870, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NDc1NDE3MDc4MTU1NzY1NzYzNDI0ODU4OTMxMgZDZD', 'text': 'yes', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.703125, system=1.078125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774333976938, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774333976321, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NDc1NDE3MDc4MTU1NzY1NzYzNDI0ODU4OTMxMgZDZD'}}]}]}
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.703125, system=1.078125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774333977059, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774333976321, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NDc1NDE3MDc4MTU1NzY1NzYzNDI0ODU4OTMxMgZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.75, system=1.1875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774334025550, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774334025044, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NTY2MTI2Mjc4NDI4Mzg4MjM5ODM3Mjg1NTgwOAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.84375, system=1.59375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774334039841, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774334039440, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY4NTkyNjgyMzIxODc3MzY0OTUyNjAwOTg4ODc2OAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.03125, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774334455246, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774334454629, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY5MzU4NTcyMDYxODg0NDEzMzIwMDIwOTM3OTMyOAZDZD', 'text': 'yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.28125, system=0.859375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774334595859, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774334595418, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDY5NjE4MjgxNjkwOTA1NDM4NTgyNzg1MTc5NjQ4MAZDZD', 'text': 'yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.71875, system=1.453125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774334891395, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774334890961, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMDcwMTYzNDYxNDkxMzE1NjgyMzU1NjMxNTY3NjY3MgZDZD', 'text': 'yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.859375, system=2.0, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774334968, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18069124433280143', 'text': 'send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.15625, system=2.6875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774334977, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18099000583777101', 'parent_id': '18069124433280143', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.859375, system=0.3125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361411282, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774361410821, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MDgzOTY4NDY1MDM2MTQ5MDg2NDEyMjg4ODE5MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.921875, system=0.484375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361416923, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774361416329, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MDk0MTI5MjE5NDQxMTU1ODU3MzExMzg2ODI4OAZDZD', 'text': 'Thanks for commenting! Here is your link!\n\n🔗 https://example.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.921875, system=0.484375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361417458, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774361416973, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MDk0MTI5MjE5NDQxMTU1ODU3MzExMzg2ODI4OAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.921875, system=0.484375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361417402, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774361416973, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MDk0MTI5MjE5NDQxMTU1ODU3MzExMzg2ODI4OAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.921875, system=0.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774361481, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17950586495964684', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.984375, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361484470, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774361484128, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MjE5MTk2NDQxNjI2NDI4NjEzODc2MjUyNjcyMAZDZD', 'text': 'Thanks for commenting! Here is your link!\n\n🔗 https://example.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.984375, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361494980, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774361494489, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MjE5MTk2NDQxNjI2NDI4NjEzODc2MjUyNjcyMAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.984375, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774361494959, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774361494489, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTE5MjE5MTk2NDQxNjI2NDI4NjEzODc2MjUyNjcyMAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.140625, system=0.796875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774362693186, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774362692683, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTIxNDQ4NTg2ODI3NzkyOTEyOTYwNjU1OTgyNTkyMAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.171875, system=0.953125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774362696352, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774362695858, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTIxNDU0NDQ0MDgyMjQzMzgyOTk0Mzg4MDE4NzkwNAZDZD', 'text': 'Thanks for commenting! Here is your link!\n\n🔗 https://example.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.171875, system=0.96875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774362709978, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774362709177, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTIxNDU0NDQ0MDgyMjQzMzgyOTk0Mzg4MDE4NzkwNAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.171875, system=0.96875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774362709997, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774362709177, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTIxNDU0NDQ0MDgyMjQzMzgyOTk0Mzg4MDE4NzkwNAZDZD'}}]}]}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+!!! CATCH-ALL LOG: GET /api/auth/facebook/callback !!!
+{'method': 'GET', 'path': 'api/auth/facebook/callback', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+!!! CATCH-ALL LOG: GET /api/auth/facebook/callback !!!
+{'method': 'GET', 'path': 'api/auth/facebook/callback', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: OPTIONS /api/automations/1
+
+>>> GLOBAL LOG: DELETE /api/automations/1
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.265625, system=1.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774383656, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18397035553158751', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: OPTIONS /api/automations
+
+>>> GLOBAL LOG: POST /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.703125, system=2.15625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774383765, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18077314607573980', 'text': 'Sendit'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.75, system=2.15625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774383801742, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774383801141, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYwMzg2ODIwMDczNzM3MTE1OTgyMTE3NjI3NDk0NAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774384112864, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774384111650, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYwOTU5NjA3NTMxNDI3MTY0OTA5MjE3MTk4ODk5MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: POST /api/config/disconnect
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.890625, system=0.796875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774384187, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18365264197205015', 'text': 'Sendit'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.90625, system=0.796875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774384202, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18316498846251615', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.125, system=0.84375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774384374, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18071848382220659', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.125, system=0.84375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774384383653, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774384383079, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYxNDYwMzA1MDQ2ODY4ODc4MjQzMjQ3MDU2NDg2NAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.390625, system=1.09375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774384612683, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774384612263, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYxODgzMDc1MjA2OTI5NzExNjMyNDY4ODgyMjI3MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.40625, system=1.09375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774384627466, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774384626982, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYxOTEwMjI2OTU4NDYzNzU4Mjc3MjY2NzQxNjU3NgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.4375, system=1.09375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774384648, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18078987455428213', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.796875, system=1.15625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774384943410, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774384942898, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyNDkyOTg4NDI2Nzg5ODU4MTgzOTkwNTgxNjU3NgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.390625, system=0.1875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385067560, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385067064, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyNzIyMDM0ODg5MDY2MDgxMDc5MjI2NzQxNTU1MgZDZD', 'text': 'YES'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.4375, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385070723, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774385070128, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyNzI3Njg3Njk4MjUxOTgyMTg5OTk4MjE3NjI1NgZDZD', 'text': 'Here is the link you requested! 🚀\n\n🔗 https://google.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.4375, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385071397, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774385070744, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyNzI3Njg3Njk4MjUxOTgyMTg5OTk4MjE3NjI1NgZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.4375, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385071317, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385070744, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyNzI3Njg3Njk4MjUxOTgyMTg5OTk4MjE3NjI1NgZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.390625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774385134, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17861437953669152', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.53125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385137038, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774385136663, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyODUwNDIzMjI4MDA1NTcwNzYzNDE2NDAzOTY4MAZDZD', 'text': 'Here is the link you requested! 🚀\n\n🔗 https://google.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.53125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385138775, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774385138338, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyODUwNDIzMjI4MDA1NTcwNzYzNDE2NDAzOTY4MAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.5625, system=0.53125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385138783, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385138338, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYyODUwNDIzMjI4MDA1NTcwNzYzNDE2NDAzOTY4MAZDZD'}}]}]}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: POST /api/config/disconnect
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/auth/facebook/login
+
+>>> GLOBAL LOG: GET /api/auth/facebook/callback
+
+>>> GLOBAL LOG: GET /favicon.ico
+
+!!! CATCH-ALL LOG: GET /favicon.ico !!!
+{'method': 'GET', 'path': 'favicon.ico', 'body': 'not json'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: OPTIONS /api/automations
+
+>>> GLOBAL LOG: POST /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.421875, system=2.5, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774385404, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '18188823175368352', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.546875, system=2.8125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774385412, 'changes': [{'value': {'from': {'id': '17841465168913962', 'username': 'star__media_', 'self_ig_scoped_id': '4395884507224597'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '17901622791242610', 'parent_id': '18188823175368352', 'text': "Follow us and DM 'YES' to get the link instantly! 🚀"}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.765625, system=2.84375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385608970, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385608610, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYzNzIxMDEwNTA1ODcxMDU1NDQ1NzM4MDIyNTAyNAZDZD', 'text': 'YES'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.890625, system=2.96875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385637386, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385636762, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTYzNzcyOTQzMTI2Mzk5Njc5OTU2MjQ0NjUzNjcwNAZDZD', 'text': 'yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.109375, system=3.234375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385853414, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385852967, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0MTcxNzY5NTg5NzQxNTgxNDU1MDgwNjA2OTI0OAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=2.171875, system=3.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774385869524, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774385869052, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0MjAxNDQwOTE5MzI5NzI2MjM2OTIxMjIwMzAwOAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386009340, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774386008973, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NDU5NTQ5ODY1MzM3ODk0Njg2MDIxMTc2NTI0OAZDZD', 'text': 'Diagnostic Test Private Reply', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386009987, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386009460, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NDU5NTQ5ODY1MzM3ODk0Njg2MDIxMTc2NTI0OAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.453125, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386009987, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774386009460, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NDU5NTQ5ODY1MzM3ODk0Njg2MDIxMTc2NTI0OAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.65625, system=0.203125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386140250, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386139732, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NzAwNzU4Njg2NTY3Njc5MTY5MjE1NTQyMDY3MgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.359375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386144268, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774386143925, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NzA4NDkzNDgxOTg5NDM2Mjg2NDE3MjkyNDkyOAZDZD', 'text': 'hey\n\n🔗 https://addiesdomain.in/', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.359375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386144905, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774386144512, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NzA4NDkzNDgxOTg5NDM2Mjg2NDE3MjkyNDkyOAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386145055, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386144512, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0NzA4NDkzNDgxOTg5NDM2Mjg2NDE3MjkyNDkyOAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.40625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386163, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18079144928566022', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.734375, system=0.453125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386173, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '18091161440179177', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.78125, system=0.484375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386233098, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386232619, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0ODcyMTA0MTEzMzg0MjY2NTA1NDEzNjE3MjU0NAZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.875, system=0.609375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386234827, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774386234459, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0ODc1NDk3OTg5NjMxMTMzMzY1NjIyODUyODEyOAZDZD', 'text': 'hey\n\n🔗 https://addiesdomain.in/', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.875, system=0.609375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386235411, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774386235023, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0ODc1NDk3OTg5NjMxMTMzMzY1NjIyODUyODEyOAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.875, system=0.609375, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386235418, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386235023, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY0ODc1NDk3OTg5NjMxMTMzMzY1NjIyODUyODEyOAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.90625, system=0.640625, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386256, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '17970445671041164', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=1.109375, system=1.03125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386312, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '18068382335301143', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.546875, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774386909879, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774386909389, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY2MTIwNTI0NDQzNDIwMTcyNzU1NDM1ODg3MDAxNgZDZD', 'text': 'Yes'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.671875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386927, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18107907796667927', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.6875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386943, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18086984615190154', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.6875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774386958, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '18159178927434022', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.46875, system=0.21875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774387510, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18041422904577724', 'media_product_type': 'REELS'}, 'id': '18431031178191065', 'text': 'Send it'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.296875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387512775, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774387512488, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjMzMDQ1NDE4MzkxODY0NzgyMDA4MzUyNzY4MAZDZD', 'text': 'Here is the link you requested! 🚀\n\n🔗 https://google.com', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.3125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387515183, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774387514596, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjMzMDQ1NDE4MzkxODY0NzgyMDA4MzUyNzY4MAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.328125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387515193, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774387514596, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjMzMDQ1NDE4MzkxODY0NzgyMDA4MzUyNzY4MAZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.59375, system=0.328125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'entry': [{'id': '17841465168913962', 'time': 1774387526, 'changes': [{'value': {'from': {'id': '1382909329391520', 'username': 'hiteshfukte_'}, 'media': {'id': '18117259537386795', 'media_product_type': 'REELS'}, 'id': '18090326990146391', 'text': 'Ok'}, 'field': 'comments'}]}], 'object': 'instagram'}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.625, system=0.53125, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387528441, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '17841465168913962'}, 'recipient': {'id': '1382909329391520'}, 'timestamp': 1774387528146, 'message': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjYxOTMwMTcxNDM0MDA4OTU5MDg0MjM5MjU3NgZDZD', 'text': 'hey\n\n🔗 https://addiesdomain.in/', 'is_echo': True}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.625, system=0.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387530341, 'id': '17841465168913962', 'messaging': [{'timestamp': 1774387529786, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjYxOTMwMTcxNDM0MDA4OTU5MDg0MjM5MjU3NgZDZD'}}]}]}
+
+>>> GLOBAL LOG: POST /api/webhook
+
+--- WEBHOOK RECEIVED at nt.times_result(user=0.640625, system=0.546875, children_user=0.0, children_system=0.0, elapsed=0.0) ---
+{'object': 'instagram', 'entry': [{'time': 1774387530356, 'id': '17841465168913962', 'messaging': [{'sender': {'id': '1382909329391520'}, 'recipient': {'id': '17841465168913962'}, 'timestamp': 1774387529786, 'read': {'mid': 'aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY1MTY4OTEzOTYyOjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI1OTQ3NDEwNDc4NTI1MDU0MDozMjczMTY3MjYxOTMwMTcxNDM0MDA4OTU5MDg0MjM5MjU3NgZDZD'}}]}]}
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/stats
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
