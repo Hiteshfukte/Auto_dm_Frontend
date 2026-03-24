@@ -25,6 +25,51 @@ app.add_middleware(
 )
 
 from fastapi import Request
+from middleware.auth import PUBLIC_ROUTES, verify_token
+
+@app.middleware("http")
+async def auth_middleware(request: Request, call_next):
+    """
+    Global authentication middleware.
+
+    Requests whose path exactly matches a PUBLIC_ROUTES entry are allowed
+    through without a token.  All other requests must carry a valid Bearer
+    token in the Authorization header; if the token is missing or invalid
+    the middleware short-circuits with a 401 response.
+    """
+    from fastapi.responses import JSONResponse
+    from fastapi.security import HTTPAuthorizationCredentials
+
+    path = request.url.path
+
+    # Strip trailing slash for consistent matching
+    normalised = path.rstrip("/") or "/"
+
+    if normalised not in PUBLIC_ROUTES:
+        auth_header = request.headers.get("Authorization", "")
+        if not auth_header.lower().startswith("bearer "):
+            return JSONResponse(
+                status_code=401,
+                content={"detail": "Invalid or missing authentication token."},
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        token = auth_header[len("Bearer "):].strip()
+        credentials = HTTPAuthorizationCredentials(scheme="Bearer", credentials=token)
+        try:
+            verify_token(credentials)
+        except Exception as exc:
+            status_code = getattr(exc, "status_code", 401)
+            detail = getattr(exc, "detail", "Unauthorized")
+            return JSONResponse(
+                status_code=status_code,
+                content={"detail": detail},
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+    return await call_next(request)
+
+
 @app.middleware("http")
 async def log_all_requests(request: Request, call_next):
     # This automatically tricks Ngrok into skipping its warning screen

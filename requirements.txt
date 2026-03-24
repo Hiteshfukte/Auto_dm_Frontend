@@ -3,3 +3,4 @@ uvicorn
 requests
 python-dotenv
 pydantic>=2.7.0
+python-jose[cryptography]

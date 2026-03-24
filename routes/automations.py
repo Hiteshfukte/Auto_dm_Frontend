@@ -1,12 +1,13 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from database import get_db
 from models import Automation, AutomationCreate
+from middleware.auth import verify_token
 import sqlite3
 
 router = APIRouter(prefix="/api/automations", tags=["Automations"])
 
-@router.get("", response_model=List[Automation])
+@router.get("", response_model=List[Automation], dependencies=[Depends(verify_token)])
 def get_automations():
     conn = get_db()
     cursor = conn.cursor()
@@ -15,7 +16,7 @@ def get_automations():
     conn.close()
     return [dict(row) for row in rows]
 
-@router.post("", response_model=Automation)
+@router.post("", response_model=Automation, dependencies=[Depends(verify_token)])
 def create_automation(auto: AutomationCreate):
     conn = get_db()
     cursor = conn.cursor()
@@ -32,7 +33,7 @@ def create_automation(auto: AutomationCreate):
         conn.close()
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.put("/{automation_id}")
+@router.put("/{automation_id}", dependencies=[Depends(verify_token)])
 def update_automation(automation_id: int, auto: AutomationCreate):
     conn = get_db()
     cursor = conn.cursor()
@@ -48,7 +49,7 @@ def update_automation(automation_id: int, auto: AutomationCreate):
         conn.close()
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.delete("/{automation_id}")
+@router.delete("/{automation_id}", dependencies=[Depends(verify_token)])
 def delete_automation(automation_id: int):
     conn = get_db()
     cursor = conn.cursor()

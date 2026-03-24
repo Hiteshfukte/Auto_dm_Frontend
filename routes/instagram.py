@@ -1,10 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 import requests
 from config import get_config
+from middleware.auth import verify_token
 
 router = APIRouter(prefix="/api/instagram", tags=["Instagram"])
 
-@router.get("/reels")
+@router.get("/reels", dependencies=[Depends(verify_token)])
 def get_instagram_reels():
     """Fetches the latest media (Reels) from the connected Instagram account."""
     token = get_config("IG_ACCESS_TOKEN")
