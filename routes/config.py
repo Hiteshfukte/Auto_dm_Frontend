@@ -1,11 +1,12 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from config import get_config, set_config, delete_config
 from models import ConnectRequest
+from middleware.auth import verify_token
 import requests
 
 router = APIRouter(prefix="/api/config", tags=["Configuration"])
 
-@router.get("/status")
+@router.get("/status", dependencies=[Depends(verify_token)])
 def get_config_status():
     """Checks if Instagram is connected."""
     token = get_config("IG_ACCESS_TOKEN")
@@ -21,7 +22,7 @@ def get_config_status():
         "business_id": bid if connected else None
     }
 
-@router.get("/permissions")
+@router.get("/permissions", dependencies=[Depends(verify_token)])
 def check_token_permissions():
     """Debug: Check what permissions the current token has."""
     token = get_config("IG_ACCESS_TOKEN")
@@ -48,14 +49,14 @@ def check_token_permissions():
         "tip": "Look for 'instagram_manage_messages' in permissions list"
     }
 
-@router.post("/connect")
+@router.post("/connect", dependencies=[Depends(verify_token)])
 def connect_instagram(data: ConnectRequest):
     """Manually connects Instagram by saving token and ID."""
     set_config("IG_ACCESS_TOKEN", data.access_token)
     set_config("IG_BUSINESS_ID", data.business_id)
     return {"status": "connected"}
 
-@router.post("/disconnect")
+@router.post("/disconnect", dependencies=[Depends(verify_token)])
 def disconnect_instagram():
     """Disconnects Instagram by clearing tokens from the database."""
     delete_config("IG_BUSINESS_ID")

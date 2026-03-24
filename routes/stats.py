@@ -1,9 +1,10 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from database import get_db
+from middleware.auth import verify_token
 
 router = APIRouter(prefix="/api/stats", tags=["Stats"])
 
-@router.get("")
+@router.get("", dependencies=[Depends(verify_token)])
 def get_stats():
     """Returns analytics stats for the dashboard."""
     try:
