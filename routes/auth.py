@@ -112,7 +112,8 @@ def instagram_callback(code: str):
                     <p>Messaging API is now enabled!</p>
                     <script>
                         setTimeout(() => {{
-                            window.location.href = 'http://localhost:3000/dashboard/instagram?success=1';
+                            const frontendUrl = '{os.getenv("FRONTEND_URL", "http://localhost:3000")}';
+                            window.location.href = frontendUrl + '/dashboard/instagram?success=1';
                         }}, 2000);
                     </script>
                 </div>
@@ -198,7 +199,8 @@ def facebook_callback(code: str):
                     <p>Redirecting you back to Dashboard...</p>
                     <script>
                         setTimeout(() => {{
-                            window.location.href = 'http://localhost:3000/dashboard/instagram?success=1';
+                            const frontendUrl = '{os.getenv("FRONTEND_URL", "http://localhost:3000")}';
+                            window.location.href = frontendUrl + '/dashboard/instagram?success=1';
                         }}, 2000);
                     </script>
                 </div>

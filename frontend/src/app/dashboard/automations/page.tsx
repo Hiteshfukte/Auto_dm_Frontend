@@ -21,36 +21,31 @@ export default function AutomationsPage() {
     };
 
     const handleCreate = () => {
-        // Refresh automation list by remounting? Or pass down a refetch function
-        // For now, simple close will work since AutomationList fetches on mount
         handleModalClose();
-        window.location.reload(); // Quick hack to refresh list
+        window.location.reload(); 
     };
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-7xl mx-auto mt-4 px-4 relative z-10">
             {/* Header */}
-            <div>
-                <h1 className="text-3xl font-bold text-white">Automations</h1>
-                <p className="text-white/50 mt-1">
-                    Select a reel to set up an automation.
-                </p>
-            </div>
+            <header className="relative z-10">
+                <h1 className="text-4xl font-extrabold text-[#191c1e] font-headline mb-3 tracking-tight">Automations</h1>
+                <p className="text-[#565e74] text-lg font-medium">Select a reel to set up an automation.</p>
+            </header>
 
             {/* Step 1: Select Reel */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6"
+                className="bg-[#ffffff] border border-[#c3c5d9]/30 rounded-3xl p-8 shadow-[0px_10px_30px_rgba(0,104,95,0.05)]"
             >
-                <h2 className="text-lg font-bold text-white mb-4">📱 Your Recent Reels</h2>
-                <p className="text-white/50 text-sm mb-6">Click on a reel to set up an automation for it.</p>
+                <h2 className="text-xl font-bold text-[#191c1e] mb-2 font-headline tracking-tight">📱 Your Recent Reels</h2>
+                <p className="text-[#565e74] text-sm mb-6 font-medium">Click on a reel to set up an automation for it.</p>
                 <ReelGrid onSelectReel={handleReelSelect} selectedReelId={selectedReel?.id} />
             </motion.div>
 
             {/* Existing Automations */}
             <div>
-                <h2 className="text-lg font-bold text-white mb-4">⚡ Active Automations</h2>
                 <AutomationList />
             </div>
 
@@ -59,10 +54,10 @@ export default function AutomationsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6"
+                className="bg-gradient-to-br from-[#00685f]/10 to-[#6bd8cb]/10 border border-[#00685f]/20 rounded-3xl p-8"
             >
-                <h3 className="text-lg font-bold text-white mb-2">💡 Pro Tips</h3>
-                <ul className="space-y-2 text-white/70 text-sm">
+                <h3 className="text-lg font-bold text-[#00685f] mb-3 font-headline tracking-tight">💡 Pro Tips</h3>
+                <ul className="space-y-2 text-[#565e74] text-sm font-medium">
                     <li>• Use specific keywords to target engaged users</li>
                     <li>• Keep your DM message short and friendly</li>
                     <li>• Include a clear call-to-action with a link</li>

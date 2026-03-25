@@ -15,13 +15,6 @@ export default function FetchReelsCard({ onFetchComplete }: FetchReelsCardProps)
     const handleFetch = async () => {
         setLoading(true);
         try {
-            // Include a small artificial delay for UX if the API is too fast, 
-            // or just call the API. The API call itself might be fast.
-            // But we actually need to trigger the *fetching* on the parent or just re-validate.
-            // Since the main page will likely refetch or we just want to transition state:
-
-            // For now, let's assume we just call the reels endpoint to "warm up" or verify we can get them.
-            // In a real app we might trigger a background sync.
             const res = await fetch(`${API_BASE_URL}/api/instagram/reels`);
             if (res.ok) {
                 const data = await res.json();
@@ -40,20 +33,20 @@ export default function FetchReelsCard({ onFetchComplete }: FetchReelsCardProps)
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center max-w-xl mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center max-w-xl mx-auto bg-[#ffffff] border border-[#c3c5d9]/30 rounded-3xl p-12 shadow-[0px_20px_40px_rgba(0,104,95,0.05)] mt-10">
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="w-20 h-20 bg-purple-500/10 border border-purple-500/20 rounded-3xl flex items-center justify-center mb-6"
+                className="w-20 h-20 bg-[#6bd8cb]/20 rounded-3xl flex items-center justify-center mb-6"
             >
-                <Film className="w-10 h-10 text-purple-400" />
+                <Film className="w-10 h-10 text-[#00685f]" />
             </motion.div>
 
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-3xl font-bold text-white mb-4"
+                className="text-3xl font-extrabold text-[#191c1e] font-headline mb-4 tracking-tight"
             >
                 Let's Get Your Content
             </motion.h2>
@@ -62,7 +55,7 @@ export default function FetchReelsCard({ onFetchComplete }: FetchReelsCardProps)
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-white/50 mb-8"
+                className="text-[#565e74] mb-8 font-medium text-lg leading-relaxed max-w-md"
             >
                 Fetch your most recent Reels to start setting up automations.
                 We'll pull the latest 10 posts from your profile.
@@ -74,7 +67,7 @@ export default function FetchReelsCard({ onFetchComplete }: FetchReelsCardProps)
                 transition={{ delay: 0.3 }}
                 onClick={handleFetch}
                 disabled={loading}
-                className="flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
+                className="flex items-center gap-3 bg-gradient-to-br from-[#00685f] to-[#008378] text-white px-8 py-4 rounded-xl font-bold hover:scale-[1.02] transition-transform disabled:opacity-50 shadow-lg shadow-[#00685f]/20"
             >
                 {loading ? (
                     <>

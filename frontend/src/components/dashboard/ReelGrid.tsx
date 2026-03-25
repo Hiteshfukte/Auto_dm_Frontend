@@ -50,14 +50,14 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
     if (loading) {
         return (
             <div className="flex items-center justify-center p-12">
-                <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
+                <Loader2 className="w-8 h-8 text-[#00685f] animate-spin" />
             </div>
         );
     }
 
     if (error) {
         return (
-            <div className="text-center p-8 text-red-400">
+            <div className="text-center p-8 text-red-500 font-bold">
                 <p>{error}</p>
             </div>
         );
@@ -65,7 +65,7 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
 
     if (reels.length === 0) {
         return (
-            <div className="text-center p-8 text-white/50">
+            <div className="text-center p-8 text-[#565e74] font-medium">
                 <p>No reels found. Post some content first!</p>
             </div>
         );
@@ -84,9 +84,9 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: idx * 0.05 }}
                         onClick={() => onSelectReel(reel)}
-                        className={`relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group transition-all ${isSelected
-                                ? 'ring-4 ring-purple-500 scale-[1.02]'
-                                : 'hover:ring-2 hover:ring-white/30'
+                        className={`relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer group transition-all shadow-sm ${isSelected
+                                ? 'ring-4 ring-[#00685f] shadow-[0px_10px_20px_rgba(0,104,95,0.2)] scale-[1.02]'
+                                : 'hover:ring-2 hover:ring-[#c3c5d9]'
                             }`}
                     >
                         {/* Thumbnail */}
@@ -97,15 +97,15 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
                                 className="w-full h-full object-cover"
                             />
                         ) : (
-                            <div className="w-full h-full bg-white/10 flex items-center justify-center">
-                                <Play className="w-8 h-8 text-white/30" />
+                            <div className="w-full h-full bg-[#f2f4f6] flex items-center justify-center">
+                                <Play className="w-8 h-8 text-[#c3c5d9]" />
                             </div>
                         )}
 
                         {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#191c1e]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div className="absolute bottom-0 left-0 right-0 p-3">
-                                <div className="flex items-center gap-3 text-white text-xs">
+                                <div className="flex items-center gap-3 text-[#ffffff] text-xs font-bold">
                                     <span className="flex items-center gap-1">
                                         <Heart className="w-3 h-3" />
                                         {reel.like_count || 0}
@@ -120,15 +120,15 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
 
                         {/* Selected Checkmark */}
                         {isSelected && (
-                            <div className="absolute top-2 right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
-                                <Check className="w-4 h-4 text-white" />
+                            <div className="absolute top-2 right-2 w-6 h-6 bg-[#00685f] rounded-full flex items-center justify-center shadow-lg">
+                                <Check className="w-4 h-4 text-[#ffffff]" />
                             </div>
                         )}
 
                         {/* Media Type Badge */}
                         {reel.media_type === 'VIDEO' && (
                             <div className="absolute top-2 left-2">
-                                <Play className="w-4 h-4 text-white drop-shadow-lg" />
+                                <Play className="w-4 h-4 text-[#ffffff] drop-shadow-md" />
                             </div>
                         )}
                     </motion.div>

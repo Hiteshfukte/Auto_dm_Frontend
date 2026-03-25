@@ -49,31 +49,31 @@ const ChartAndROI = () => (
                 <span>Day 30</span>
             </div>
         </div>
-        <div className="bg-slate-900 text-white p-8 rounded-xl flex flex-col justify-between shadow-[0px_20px_40px_rgba(0,104,95,0.08)]">
+        <div className="bg-[#ffffff] border border-[#c3c5d9]/30 p-8 rounded-xl flex flex-col justify-between shadow-[0px_20px_40px_rgba(0,104,95,0.08)]">
             <div>
-                <h3 className="text-lg font-bold font-headline mb-2">Campaign ROI</h3>
-                <p className="text-slate-400 text-sm">Automated interactions vs direct revenue impact.</p>
+                <h3 className="text-lg font-bold font-headline mb-2 text-[#191c1e]">Campaign ROI</h3>
+                <p className="text-[#565e74] text-sm font-medium">Automated interactions vs direct revenue impact.</p>
             </div>
             <div className="py-6">
                 <div className="relative w-32 h-32 mx-auto">
                     <svg className="w-full h-full" viewBox="0 0 36 36">
-                        <path className="stroke-slate-800" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" strokeWidth="3"></path>
+                        <path className="stroke-[#f2f4f6]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" strokeWidth="3"></path>
                         <path className="stroke-[#00685f]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" strokeDasharray="75, 100" strokeWidth="3"></path>
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center flex-col">
-                        <span className="text-2xl font-bold">75%</span>
-                        <span className="text-[10px] uppercase text-slate-500 font-bold">Target</span>
+                        <span className="text-2xl font-bold text-[#191c1e]">75%</span>
+                        <span className="text-[10px] uppercase text-[#565e74] font-bold tracking-widest">Target</span>
                     </div>
                 </div>
             </div>
             <div className="space-y-4">
                 <div className="flex justify-between items-center text-sm">
-                    <span className="text-slate-400">Total Revenue</span>
-                    <span className="font-bold">$12,450</span>
+                    <span className="text-[#565e74] font-medium">Total Revenue</span>
+                    <span className="font-bold text-[#191c1e]">$12,450</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
-                    <span className="text-slate-400">Cost per Lead</span>
-                    <span className="font-bold">$1.12</span>
+                    <span className="text-[#565e74] font-medium">Cost per Lead</span>
+                    <span className="font-bold text-[#191c1e]">$1.12</span>
                 </div>
             </div>
         </div>
