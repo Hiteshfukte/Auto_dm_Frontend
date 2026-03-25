@@ -41,10 +41,12 @@ export default function Sidebar() {
                         <span className="material-symbols-outlined">help</span>
                         <span className="font-body text-sm tracking-wide">Support</span>
                     </Link>
-                    <Link href="/login" className="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors font-bold">
-                        <span className="material-symbols-outlined">logout</span>
-                        <span className="font-body text-sm tracking-wide">Logout</span>
-                    </Link>
+                    <form action="/auth/signout" method="post" className="w-full">
+                        <button type="submit" className="w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors font-bold">
+                            <span className="material-symbols-outlined">logout</span>
+                            <span className="font-body text-sm tracking-wide">Logout</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </aside>

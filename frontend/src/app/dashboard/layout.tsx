@@ -1,10 +1,16 @@
 import Sidebar from '@/components/dashboard/Sidebar';
+import { createClient } from '@/utils/supabase/server';
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    const fullName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || "Platform User";
+    const avatarUrl = user?.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=00685f&color=fff`;
     return (
         <div className="flex min-h-screen bg-[#f7f9fb] font-body text-[#191c1e]">
             <Sidebar />
@@ -33,10 +39,10 @@ export default function DashboardLayout({
                         </button>
                         <div className="flex items-center gap-3 pl-6 border-l border-slate-200">
                             <div className="text-right">
-                                <p className="text-sm font-semibold text-[#191c1e] font-headline">Alex Chen</p>
+                                <p className="text-sm font-semibold text-[#191c1e] font-headline">{fullName}</p>
                                 <p className="text-xs text-[#565e74]">Admin</p>
                             </div>
-                            <img className="w-10 h-10 rounded-full border-2 border-[#00685f]/10 object-cover" alt="profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBiRcDmizzvIq4_rsJ2R1WKxZHroafSRNsfzFBz-xq7h89Wqya-2w6zGJ8qhNGPotyd6nY8N66toQema7yaEW-5t5uSCtDbC7vawY1Y6gh7moEzUu4h0UtZyoqNBkpm7Kl5kNY2hm8_OI-hlpkrpm-cQS159ll0yXSEJCLibcIKawXgUsg_-BaFWBLnHFDfN3BADWfrNO4oQoCFSaDKmcP8XWbMHSywm3VyWWoTlVvQLVSDO_x6zCpeA6mTjqWEBJsO0r2mJhUlr0E"/>
+                            <img className="w-10 h-10 rounded-full border-2 border-[#00685f]/10 object-cover" alt="profile" src={avatarUrl}/>
                         </div>
                     </div>
                 </header>
