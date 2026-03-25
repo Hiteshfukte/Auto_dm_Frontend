@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Instagram, LogOut, CheckCircle, AlertCircle, ArrowRight } from 'lucide-react';
+import { Instagram, LogOut, CheckCircle, AlertCircle, ArrowRight, ShieldCheck, Settings } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { API_BASE_URL } from '@/lib/constants';
 
@@ -32,7 +32,6 @@ export default function InstagramPage() {
 
     const handleOAuthConnect = () => {
         setLoading(true);
-        // Direct redirect to backend OAuth endpoint
         window.location.href = `${API_BASE_URL}/api/auth/facebook/login`;
     };
 
@@ -49,81 +48,104 @@ export default function InstagramPage() {
     if (status === 'loading') {
         return (
             <div className="flex items-center justify-center min-h-[50vh]">
-                <div className="text-white/50">Loading status...</div>
+                <div className="w-12 h-12 border-4 border-[#00685f]/30 border-t-[#00685f] rounded-full animate-spin"></div>
             </div>
         );
     }
 
     return (
-        <div className="max-w-4xl mx-auto space-y-8">
-            <header>
-                <h1 className="text-3xl font-bold text-white mb-2">Instagram Connection</h1>
-                <p className="text-white/50">Manage your connection to the Instagram Graph API.</p>
+        <div className="max-w-4xl mx-auto space-y-10 relative mt-4">
+            <header className="relative z-10">
+                <h1 className="text-4xl font-extrabold text-[#191c1e] font-headline mb-3 tracking-tight">Instagram Connection</h1>
+                <p className="text-[#565e74] text-lg font-medium">Manage your secure connection to the Instagram Graph API.</p>
             </header>
 
             {status === 'connected' ? (
                 <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 flex items-start justify-between"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                    className="bg-[#ffffff] border border-[#c3c5d9]/30 rounded-3xl p-10 flex items-start justify-between relative overflow-hidden shadow-[0px_20px_40px_rgba(0,104,95,0.08)]"
                 >
-                    <div className="flex items-start gap-4">
-                        <div className="bg-green-500/20 p-3 rounded-xl">
-                            <CheckCircle className="w-8 h-8 text-green-400" />
+                    <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#00685f]/10 blur-[60px] rounded-full pointer-events-none" />
+                    <div className="flex items-start gap-6 relative z-10">
+                        <div className="bg-gradient-to-br from-[#00685f] to-[#008378] p-4 rounded-2xl shadow-lg shadow-[#00685f]/20">
+                            <ShieldCheck className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                            <h2 className="text-xl font-bold text-white mb-1">Connected Successfully</h2>
-                            <p className="text-white/60 mb-4">Your Instagram Business Account is active and ready for automations.</p>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-lg text-sm font-mono text-white/40">
-                                <span>ID: {businessId}</span>
+                            <h2 className="text-2xl font-bold text-[#191c1e] mb-2 tracking-tight font-headline">Connected Successfully</h2>
+                            <p className="text-[#565e74] mb-6 text-sm max-w-md leading-relaxed font-medium">Your Instagram Business Account is perfectly synced and ready to power your automated workflows and DMs.</p>
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#f2f4f6] border border-[#c3c5d9]/30 rounded-xl text-sm font-mono text-[#191c1e] font-bold">
+                                <span className="uppercase text-[10px] font-extrabold text-[#565e74] tracking-wider">Business ID</span>
+                                {businessId}
                             </div>
                         </div>
                     </div>
 
                     <button
                         onClick={handleDisconnect}
-                        className="flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors font-medium px-4 py-2 hover:bg-red-500/10 rounded-lg"
+                        className="relative z-10 flex items-center gap-2 text-red-500 hover:text-red-700 transition-all font-bold px-5 py-3 hover:bg-red-50 rounded-xl group"
                     >
-                        <LogOut className="w-4 h-4" />
+                        <LogOut className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         Disconnect
                     </button>
                 </motion.div>
             ) : (
                 <motion.div
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-zinc-900 border border-white/5 rounded-2xl p-12 flex flex-col items-center text-center"
+                    className="bg-[#ffffff] border border-[#c3c5d9]/30 rounded-3xl p-14 flex flex-col items-center text-center shadow-[0px_20px_40px_rgba(0,104,95,0.08)] relative overflow-hidden"
                 >
-                    <div className="bg-blue-600/20 p-6 rounded-3xl mb-8">
-                        <Instagram className="w-20 h-20 text-blue-500" />
-                    </div>
+                    <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-teal-400 via-[#00685f] to-teal-800" />
+                    
+                    <motion.div 
+                        whileHover={{ scale: 1.05, rotate: 5 }}
+                        className="bg-gradient-to-br from-[#00685f] to-[#008378] p-1 rounded-3xl shadow-2xl shadow-[#00685f]/20 mb-10"
+                    >
+                        <div className="bg-white p-6 rounded-3xl">
+                            <Instagram className="w-16 h-16 text-transparent bg-clip-text fill-[url(#ig-gradient)] stroke-[url(#ig-gradient)]" />
+                            <svg width="0" height="0">
+                                <linearGradient id="ig-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+                                    <stop stopColor="#f09433" offset="0%" />
+                                    <stop stopColor="#e6683c" offset="25%" />
+                                    <stop stopColor="#dc2743" offset="50%" />
+                                    <stop stopColor="#cc2366" offset="75%" />
+                                    <stop stopColor="#bc1888" offset="100%" />
+                                </linearGradient>
+                            </svg>
+                        </div>
+                    </motion.div>
 
-                    <h2 className="text-3xl font-bold text-white mb-4">Connect your Account</h2>
-                    <p className="text-white/50 max-w-lg mb-10 leading-relaxed">
-                        Connect your Instagram Business account to enable automatic DM replies, comment tracking, and lead generation.
+                    <h2 className="text-3xl font-extrabold text-[#191c1e] mb-4 tracking-tight font-headline">Connect your Account</h2>
+                    <p className="text-[#565e74] max-w-md mb-12 leading-relaxed text-sm font-medium">
+                        Instantly link your Instagram Business account to unlock high-converting automated DM replies and smart comment tracking.
                     </p>
 
                     <button
                         onClick={handleOAuthConnect}
                         disabled={loading}
-                        className="bg-[#0064e0] text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#005bb5] transition-all transform hover:scale-105 active:scale-95 flex items-center gap-3 disabled:opacity-50 shadow-xl shadow-blue-900/20"
+                        className="group relative bg-gradient-to-br from-[#006a61] to-[#008378] text-white px-8 py-5 rounded-2xl font-bold text-lg hover:from-[#005049] hover:to-[#006a61] transition-all shadow-[0px_10px_20px_rgba(0,104,95,0.2)] hover:-translate-y-1 flex items-center gap-4 disabled:opacity-50 disabled:hover:translate-y-0 w-full max-w-sm justify-center"
                     >
                         {loading ? 'Redirecting...' : (
                             <>
-                                <svg fill="currentColor" viewBox="0 0 24 24" className="w-7 h-7"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                                 Continue with Facebook
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </>
                         )}
                     </button>
 
-                    <div className="mt-8 flex items-center gap-2 text-xs text-white/30 bg-white/5 px-4 py-2 rounded-lg">
-                        <AlertCircle className="w-4 h-4" />
+                    <div className="mt-10 flex items-center gap-3 text-xs text-[#006a61] bg-[#006a61]/5 border border-[#006a61]/20 px-5 py-3 rounded-xl font-medium">
+                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
                         <span>Requires a Facebook Page linked to an Instagram Business Profile.</span>
                     </div>
 
-                    <div className="mt-12 w-full max-w-md bg-white/5 p-6 rounded-xl border border-white/10 text-left">
-                        <h3 className="text-sm font-bold text-white mb-2">Advanced: Manual Override</h3>
-                        <p className="text-xs text-white/40 mb-4">If your app is restricted by Meta, paste your IGAA token here to bypass OAuth.</p>
+                    <div className="mt-14 w-full max-w-md bg-[#f7f9fb] p-8 rounded-2xl border border-[#c3c5d9]/30 text-left shadow-sm">
+                        <div className="flex items-center gap-2 mb-2">
+                             <Settings className="w-4 h-4 text-[#565e74]" />
+                             <h3 className="text-sm font-bold text-[#191c1e] uppercase tracking-widest">Advanced Setup</h3>
+                        </div>
+                        <p className="text-xs text-[#565e74] mb-6 leading-relaxed font-medium">If your app is restricted by Meta, securely paste your IGAA token here to bypass OAuth linking.</p>
                         
                         <form onSubmit={async (e) => {
                             e.preventDefault();
@@ -137,10 +159,14 @@ export default function InstagramPage() {
                                 })
                             });
                             window.location.reload();
-                        }} className="space-y-3">
-                            <input name="token" required placeholder="IGAA... Access Token" className="w-full bg-black/50 border border-white/10 rounded-lg px-3 py-2 text-sm text-white" />
-                            <input name="bid" required placeholder="Instagram Business ID" className="w-full bg-black/50 border border-white/10 rounded-lg px-3 py-2 text-sm text-white" />
-                            <button type="submit" className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 rounded-lg text-sm transition-colors">
+                        }} className="space-y-4">
+                            <div>
+                                <input name="token" required placeholder="IGAA... Access Token" className="w-full bg-white border border-[#c3c5d9]/50 focus:border-[#006a61] focus:ring-1 focus:ring-[#006a61] rounded-xl px-4 py-3 text-sm text-[#191c1e] transition-all outline-none placeholder:text-[#c3c5d9]" />
+                            </div>
+                            <div>
+                                <input name="bid" required placeholder="Instagram Business ID" className="w-full bg-white border border-[#c3c5d9]/50 focus:border-[#006a61] focus:ring-1 focus:ring-[#006a61] rounded-xl px-4 py-3 text-sm text-[#191c1e] transition-all outline-none placeholder:text-[#c3c5d9]" />
+                            </div>
+                            <button type="submit" className="w-full bg-[#191c1e] hover:bg-[#464e63] text-white font-bold py-3 rounded-xl text-sm transition-all mt-4">
                                 Save Manual Config
                             </button>
                         </form>

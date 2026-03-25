@@ -2,65 +2,50 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Zap, Settings, LogOut, Instagram } from 'lucide-react';
-
-const navItems = [
-    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    { name: 'Automations', href: '/dashboard/automations', icon: Zap },
-    { name: 'Instagram', href: '/dashboard/instagram', icon: Instagram },
-    { name: 'Settings', href: '/dashboard/settings', icon: Settings },
-];
 
 export default function Sidebar() {
     const pathname = usePathname();
 
+    const navItems = [
+        { name: 'Dashboard', href: '/dashboard', icon: 'dashboard' },
+        { name: 'Automations', href: '/dashboard/automations', icon: 'bolt' },
+        { name: 'Instagram', href: '/dashboard/instagram', icon: 'smartphone' },
+        { name: 'Analytics', href: '/dashboard/analytics', icon: 'insights' },
+        { name: 'Settings', href: '/dashboard/settings', icon: 'settings' },
+    ];
+
     return (
-        <aside className="w-64 bg-[#1f1f1f] border-r border-white/10 min-h-screen flex flex-col">
-            {/* Logo */}
-            <div className="p-6 border-b border-white/10">
-                <Link href="/dashboard" className="text-2xl font-bold text-white">
-                    AutoDM
-                </Link>
-            </div>
-
-            {/* Nav Items */}
-            <nav className="flex-1 p-4 space-y-2">
-                {navItems.map((item) => {
-                    const isActive = pathname === item.href;
-                    return (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive
-                                    ? 'bg-purple-500/20 text-purple-400'
-                                    : 'text-white/60 hover:bg-white/5 hover:text-white'
-                                }`}
-                        >
-                            <item.icon className="w-5 h-5" />
-                            {item.name}
-                        </Link>
-                    );
-                })}
-            </nav>
-
-            {/* Logout */}
-            <div className="p-4 border-t border-white/10">
-                <button
-                    onClick={async () => {
-                        try {
-                            // Call V2 backend to clear config
-                            await fetch('http://localhost:8000/api/config/disconnect', { method: 'POST' });
-                        } catch (e) {
-                            console.error('Failed to disconnect backend', e);
-                        }
-                        // Redirect to login page
-                        window.location.href = '/login';
-                    }}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/60 hover:bg-white/5 hover:text-white transition-colors w-full"
-                >
-                    <LogOut className="w-5 h-5" />
-                    Sign Out
-                </button>
+        <aside className="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-950 border-r border-slate-800 shadow-2xl shadow-teal-900/10 z-50">
+            <div className="flex flex-col h-full py-6">
+                <div className="px-6 mb-10">
+                    <h1 className="text-xl font-bold tracking-tight text-white font-headline">AutoDmPro</h1>
+                    <p className="text-xs text-[#6bd8cb]/80 font-bold tracking-widest uppercase mt-1">Enterprise</p>
+                </div>
+                <nav className="flex-1 space-y-1">
+                    {navItems.map((item) => {
+                        const isActive = pathname === item.href || (pathname.startsWith(item.href) && item.href !== '/dashboard');
+                        return (
+                            <Link 
+                                key={item.name} 
+                                href={item.href} 
+                                className={`flex items-center gap-3 px-4 py-3 font-bold transition-all duration-200 ${isActive ? 'text-[#6bd8cb] bg-[#00685f]/20 border-r-4 border-[#6bd8cb]' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'}`}
+                            >
+                                <span className="material-symbols-outlined">{item.icon}</span>
+                                <span className="font-body text-sm tracking-wide">{item.name}</span>
+                            </Link>
+                        );
+                    })}
+                </nav>
+                <div className="mt-auto pt-6 border-t border-slate-800">
+                    <Link href="#" className="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors font-bold">
+                        <span className="material-symbols-outlined">help</span>
+                        <span className="font-body text-sm tracking-wide">Support</span>
+                    </Link>
+                    <Link href="/login" className="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors font-bold">
+                        <span className="material-symbols-outlined">logout</span>
+                        <span className="font-body text-sm tracking-wide">Logout</span>
+                    </Link>
+                </div>
             </div>
         </aside>
     );

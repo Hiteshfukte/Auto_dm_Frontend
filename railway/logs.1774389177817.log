@@ -1,0 +1,346 @@
+2026-03-24T21:49:39.363635706Z [inf]  
+2026-03-24T21:49:40.740555488Z [inf]  [35m[Region: us-east4][0m
+2026-03-24T21:49:41.137708621Z [inf]  
+2026-03-24T21:49:41.137768676Z [inf]  [38;2;125;86;243m╭─────────────────╮[0m
+2026-03-24T21:49:41.137776514Z [inf]  [38;2;125;86;243m│[0m Railpack 0.22.1 [38;2;125;86;243m│[0m
+2026-03-24T21:49:41.137781444Z [inf]  [38;2;125;86;243m╰─────────────────╯[0m
+2026-03-24T21:49:41.137788333Z [inf]  
+2026-03-24T21:49:41.137793864Z [inf]  [97m↳ Detected Python[0m
+2026-03-24T21:49:41.137799011Z [inf]  [97m↳ Using pip[0m
+2026-03-24T21:49:41.137803811Z [inf]  [97m↳ Found web command in Procfile[0m
+2026-03-24T21:49:41.137808566Z [inf]  
+2026-03-24T21:49:41.137813255Z [inf]  [1mPackages[0m
+2026-03-24T21:49:41.137818247Z [inf]  [38;5;238m──────────[0m
+2026-03-24T21:49:41.137822856Z [inf]  [95mpython[0m  [38;5;238m│[0m  [96m3.13.12[0m  [38;5;238m│[0m  railpack default (3.13)
+2026-03-24T21:49:41.137827356Z [inf]  
+2026-03-24T21:49:41.137831826Z [inf]  [1mSteps[0m
+2026-03-24T21:49:41.137836602Z [inf]  [38;5;238m──────────[0m
+2026-03-24T21:49:41.137841349Z [inf]  [95m▸ install[0m
+2026-03-24T21:49:41.137846079Z [inf]  [38;5;245m$[0m [1mpython -m venv /app/.venv[0m
+2026-03-24T21:49:41.137850572Z [inf]  [38;5;245m$[0m [1mpip install -r requirements.txt[0m
+2026-03-24T21:49:41.137855311Z [inf]  
+2026-03-24T21:49:41.137860049Z [inf]  [1mDeploy[0m
+2026-03-24T21:49:41.137864549Z [inf]  [38;5;238m──────────[0m
+2026-03-24T21:49:41.137869224Z [inf]  [38;5;245m$[0m [1muvicorn main:app --host 0.0.0.0 --port $PORT[0m
+2026-03-24T21:49:41.137874066Z [inf]  
+2026-03-24T21:49:41.137882616Z [inf]  
+2026-03-24T21:49:41.140743669Z [inf]  Successfully prepared Railpack plan for build
+2026-03-24T21:49:41.140797005Z [inf]  
+2026-03-24T21:49:41.140803894Z [inf]  
+2026-03-24T21:49:41.141515983Z [inf]  context: 8vjl-NJCg
+2026-03-24T21:49:41.384018246Z [inf]  [internal] load build definition from railpack-plan.json
+2026-03-24T21:49:41.384079440Z [inf]  [internal] load build definition from railpack-plan.json
+2026-03-24T21:49:41.384097139Z [inf]  [internal] load build definition from railpack-plan.json
+2026-03-24T21:49:41.397571671Z [inf]  [internal] load build definition from railpack-plan.json
+2026-03-24T21:49:41.403462165Z [inf]  resolve image config for docker-image://ghcr.io/railwayapp/railpack-frontend:v0.22.1
+2026-03-24T21:49:41.444582381Z [inf]  resolve image config for docker-image://ghcr.io/railwayapp/railpack-frontend:v0.22.1
+2026-03-24T21:49:41.536627832Z [inf]  load build definition from railpack-plan.json
+2026-03-24T21:49:41.536688966Z [inf]  load build definition from railpack-plan.json
+2026-03-24T21:49:41.537133193Z [inf]  load build definition from railpack-plan.json
+2026-03-24T21:49:41.552953601Z [inf]  load build definition from railpack-plan.json
+2026-03-24T21:49:41.709317935Z [inf]  [railpack] merge ghcr.io/railwayapp/railpack-runtime:mise-2026.3.13, $packages:mise, $build, $build
+2026-03-24T21:49:41.709371667Z [inf]  copy /app
+2026-03-24T21:49:41.709386522Z [inf]  copy /app/.venv
+2026-03-24T21:49:41.709402217Z [inf]  copy / /app
+2026-03-24T21:49:41.709414737Z [inf]  pip install -r requirements.txt
+2026-03-24T21:49:41.709428182Z [inf]  copy requirements.txt
+2026-03-24T21:49:41.709440816Z [inf]  loading .
+2026-03-24T21:49:41.709451732Z [inf]  python -m venv /app/.venv
+2026-03-24T21:49:41.709463173Z [inf]  copy /root/.local/state/mise
+2026-03-24T21:49:41.709470630Z [inf]  copy /etc/mise/config.toml
+2026-03-24T21:49:41.709480431Z [inf]  copy /usr/local/bin/mise
+2026-03-24T21:49:41.709487716Z [inf]  copy /mise/installs
+2026-03-24T21:49:41.709505101Z [inf]  loading .
+2026-03-24T21:49:41.711668168Z [inf]  mkdir /etc/mise
+2026-03-24T21:49:41.711711378Z [inf]  create mise config
+2026-03-24T21:49:41.711724120Z [inf]  loading .
+2026-03-24T21:49:41.711914433Z [inf]  create mise config
+2026-03-24T21:49:41.712015407Z [inf]  install mise packages: python
+2026-03-24T21:49:41.849199235Z [inf]  loading .
+2026-03-24T21:49:42.090830157Z [inf]  mise python@3.13.12  [1/3] install
+
+2026-03-24T21:49:42.091084878Z [inf]  mise python@3.13.12  [1/3] download cpython-3.13.12+20260320-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+
+2026-03-24T21:49:42.354668028Z [inf]  mise python@3.13.12  [1/3] generate checksum cpython-3.13.12+20260320-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+
+2026-03-24T21:49:42.368320756Z [inf]  mise python@3.13.12  [1/3] extract cpython-3.13.12+20260320-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+
+2026-03-24T21:49:43.017408626Z [inf]  mise python@3.13.12  [1/3] python --version
+
+2026-03-24T21:49:43.023724381Z [inf]  mise python@3.13.12  [1/3] Python 3.13.12
+
+2026-03-24T21:49:43.032025879Z [inf]  mise python@3.13.12 ✓ installed
+
+2026-03-24T21:49:43.109545001Z [inf]  install mise packages: python
+2026-03-24T21:49:43.112978913Z [inf]  python -m venv /app/.venv
+2026-03-24T21:49:47.201672214Z [inf]  python -m venv /app/.venv
+2026-03-24T21:49:47.203855692Z [inf]  copy requirements.txt
+2026-03-24T21:49:47.243529683Z [inf]  copy requirements.txt
+2026-03-24T21:49:47.245093924Z [inf]  pip install -r requirements.txt
+2026-03-24T21:49:48.439412539Z [inf]  Collecting fastapi==0.110.0 (from -r requirements.txt (line 1))
+
+2026-03-24T21:49:48.473449083Z [inf]    Downloading fastapi-0.110.0-py3-none-any.whl.metadata (25 kB)
+
+2026-03-24T21:49:48.526246549Z [inf]  Collecting uvicorn==0.27.1 (from -r requirements.txt (line 2))
+
+2026-03-24T21:49:48.531452747Z [inf]    Downloading uvicorn-0.27.1-py3-none-any.whl.metadata (6.3 kB)
+
+2026-03-24T21:49:48.568458132Z [inf]  Collecting requests==2.31.0 (from -r requirements.txt (line 3))
+
+2026-03-24T21:49:48.573197632Z [inf]    Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+
+2026-03-24T21:49:48.594197896Z [inf]  Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 4))
+
+2026-03-24T21:49:48.598051946Z [inf]    Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+
+2026-03-24T21:49:48.70797436Z [inf]  Collecting pydantic==2.6.4 (from -r requirements.txt (line 5))
+
+2026-03-24T21:49:48.712922098Z [inf]    Downloading pydantic-2.6.4-py3-none-any.whl.metadata (85 kB)
+
+2026-03-24T21:49:48.788387244Z [inf]  Collecting starlette<0.37.0,>=0.36.3 (from fastapi==0.110.0->-r requirements.txt (line 1))
+
+2026-03-24T21:49:48.79306158Z [inf]    Downloading starlette-0.36.3-py3-none-any.whl.metadata (5.9 kB)
+
+2026-03-24T21:49:48.81998946Z [inf]  Collecting typing-extensions>=4.8.0 (from fastapi==0.110.0->-r requirements.txt (line 1))
+
+2026-03-24T21:49:48.824220846Z [inf]    Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+
+2026-03-24T21:49:48.843978194Z [inf]  Collecting annotated-types>=0.4.0 (from pydantic==2.6.4->-r requirements.txt (line 5))
+
+2026-03-24T21:49:48.850962034Z [inf]    Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+
+2026-03-24T21:49:49.49825301Z [inf]  Collecting pydantic-core==2.16.3 (from pydantic==2.6.4->-r requirements.txt (line 5))
+
+2026-03-24T21:49:49.507935172Z [inf]    Downloading pydantic_core-2.16.3.tar.gz (368 kB)
+
+2026-03-24T21:49:49.581059164Z [inf]    Installing build dependencies: started
+
+2026-03-24T21:49:51.055999744Z [inf]    Installing build dependencies: finished with status 'done'
+
+2026-03-24T21:49:51.057795174Z [inf]    Getting requirements to build wheel: started
+
+2026-03-24T21:49:51.269651031Z [inf]    Getting requirements to build wheel: finished with status 'done'
+
+2026-03-24T21:49:51.271639355Z [inf]    Installing backend dependencies: started
+
+2026-03-24T21:49:52.827838559Z [inf]    Installing backend dependencies: finished with status 'done'
+
+2026-03-24T21:49:52.828684064Z [inf]    Preparing metadata (pyproject.toml): started
+
+2026-03-24T21:50:05.224506641Z [inf]    Preparing metadata (pyproject.toml): finished with status 'done'
+
+2026-03-24T21:50:05.2485053Z [inf]  Collecting click>=7.0 (from uvicorn==0.27.1->-r requirements.txt (line 2))
+
+2026-03-24T21:50:05.25252255Z [inf]    Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+
+2026-03-24T21:50:05.266663388Z [inf]  Collecting h11>=0.8 (from uvicorn==0.27.1->-r requirements.txt (line 2))
+
+2026-03-24T21:50:05.268250956Z [inf]    Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+
+2026-03-24T21:50:05.353227036Z [inf]  Collecting charset-normalizer<4,>=2 (from requests==2.31.0->-r requirements.txt (line 3))
+
+2026-03-24T21:50:05.357819355Z [inf]    Downloading charset_normalizer-3.4.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+
+2026-03-24T21:50:05.375643254Z [inf]  Collecting idna<4,>=2.5 (from requests==2.31.0->-r requirements.txt (line 3))
+
+2026-03-24T21:50:05.377325454Z [inf]    Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+
+2026-03-24T21:50:05.406631153Z [inf]  Collecting urllib3<3,>=1.21.1 (from requests==2.31.0->-r requirements.txt (line 3))
+
+2026-03-24T21:50:05.410369181Z [inf]    Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+
+2026-03-24T21:50:05.433103668Z [inf]  Collecting certifi>=2017.4.17 (from requests==2.31.0->-r requirements.txt (line 3))
+
+2026-03-24T21:50:05.434806377Z [inf]    Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+
+2026-03-24T21:50:05.461248637Z [inf]  Collecting anyio<5,>=3.4.0 (from starlette<0.37.0,>=0.36.3->fastapi==0.110.0->-r requirements.txt (line 1))
+
+2026-03-24T21:50:05.463001972Z [inf]    Using cached anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+
+2026-03-24T21:50:05.476415078Z [inf]  Downloading fastapi-0.110.0-py3-none-any.whl (92 kB)
+
+2026-03-24T21:50:05.483362323Z [inf]  Downloading pydantic-2.6.4-py3-none-any.whl (394 kB)
+
+2026-03-24T21:50:05.49433492Z [inf]  Downloading uvicorn-0.27.1-py3-none-any.whl (60 kB)
+
+2026-03-24T21:50:05.500010229Z [inf]  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+
+2026-03-24T21:50:05.505927574Z [inf]  Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+
+2026-03-24T21:50:05.511427668Z [inf]  Downloading charset_normalizer-3.4.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (206 kB)
+
+2026-03-24T21:50:05.517556729Z [inf]  Using cached idna-3.11-py3-none-any.whl (71 kB)
+
+2026-03-24T21:50:05.521197465Z [inf]  Downloading starlette-0.36.3-py3-none-any.whl (71 kB)
+
+2026-03-24T21:50:05.524978144Z [inf]  Using cached anyio-4.13.0-py3-none-any.whl (114 kB)
+
+2026-03-24T21:50:05.528593011Z [inf]  Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+
+2026-03-24T21:50:05.535230338Z [inf]  Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+
+2026-03-24T21:50:05.539014667Z [inf]  Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+
+2026-03-24T21:50:05.542507228Z [inf]  Downloading click-8.3.1-py3-none-any.whl (108 kB)
+
+2026-03-24T21:50:05.546867955Z [inf]  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+
+2026-03-24T21:50:05.548501683Z [inf]  Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+
+2026-03-24T21:50:05.568876469Z [inf]  Building wheels for collected packages: pydantic-core
+
+2026-03-24T21:50:05.569866474Z [inf]    Building wheel for pydantic-core (pyproject.toml): started
+
+2026-03-24T21:50:14.946192677Z [inf]    Building wheel for pydantic-core (pyproject.toml): finished with status 'error'
+
+2026-03-24T21:50:14.956962949Z [inf]    error: subprocess-exited-with-error
+  
+  × Building wheel for pydantic-core (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [131 lines of output]
+      Running `maturin pep517 build-wheel -i /app/.venv/bin/python --compatibility off`
+      Rust not found, installing into a temporary directory
+      Python reports SOABI: cpython-313-x86_64-linux-gnu
+      Computed rustc target triple: x86_64-unknown-linux-gnu
+      Installation directory: /root/.cache/puccinialin
+      Rustup already downloaded
+      Installing rust to /root/.cache/puccinialin/rustup
+      warn: It looks like you have an existing rustup settings file at:
+      warn: /root/.rustup/settings.toml
+      warn: Rustup will install the default toolchain as specified in the settings file,
+      warn: instead of the one inferred from the default host triple.
+      info: profile set to minimal
+      info: default host triple is x86_64-unknown-linux-gnu
+      warn: Updating existing toolchain, profile choice will be ignored
+      info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+      info: default toolchain set to stable-x86_64-unknown-linux-gnu
+      Checking if cargo is installed
+      cargo 1.94.0 (85eff7c80 2026-01-15)
+      📦 Including license file `LICENSE`
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found CPython 3.13 at /app/.venv/bin/python
+      📡 Using build options features, bindings from pyproject.toml
+         Compiling autocfg v1.1.0
+         Compiling proc-macro2 v1.0.76
+         Compiling target-lexicon v0.12.9
+         Compiling unicode-ident v1.0.10
+         Compiling python3-dll-a v0.2.9
+         Compiling libc v0.2.147
+         Compiling once_cell v1.18.0
+         Compiling version_check v0.9.4
+         Compiling cfg-if v1.0.0
+         Compiling heck v0.4.1
+         Compiling static_assertions v1.1.0
+         Compiling zerocopy v0.7.32
+         Compiling rustversion v1.0.13
+         Compiling parking_lot_core v0.9.8
+         Compiling smallvec v1.11.2
+         Compiling scopeguard v1.1.0
+         Compiling allocator-api2 v0.2.16
+         Compiling tinyvec_macros v0.1.1
+         Compiling serde v1.0.195
+         Compiling memchr v2.6.3
+         Compiling unicode-bidi v0.3.13
+         Compiling equivalent v1.0.1
+         Compiling serde_json v1.0.109
+         Compiling regex-syntax v0.8.2
+         Compiling indoc v2.0.4
+         Compiling unindent v0.2.3
+         Compiling percent-encoding v2.3.1
+         Compiling ryu v1.0.14
+         Compiling itoa v1.0.8
+         Compiling uuid v1.6.1
+         Compiling base64 v0.21.7
+         Compiling lexical-util v0.8.5
+         Compiling tinyvec v1.6.0
+         Compiling form_urlencoded v1.2.1
+         Compiling ahash v0.8.7
+         Compiling num-traits v0.2.16
+         Compiling lock_api v0.4.10
+         Compiling num-integer v0.1.45
+         Compiling memoffset v0.9.0
+         Compiling num-bigint v0.4.4
+         Compiling pyo3-build-config v0.20.2
+         Compiling aho-corasick v1.0.2
+         Compiling quote v1.0.35
+         Compiling getrandom v0.2.10
+         Compiling syn v2.0.48
+         Compiling parking_lot v0.12.1
+         Compiling unicode-normalization v0.1.22
+         Compiling lexical-parse-integer v0.8.6
+         Compiling lexical-write-integer v0.8.5
+         Compiling hashbrown v0.14.3
+         Compiling lexical-parse-float v0.8.5
+         Compiling lexical-write-float v0.8.5
+         Compiling idna v0.5.0
+         Compiling lexical-core v0.8.5
+         Compiling pyo3-ffi v0.20.2
+         Compiling pyo3 v0.20.2
+         Compiling pydantic-core v2.16.3 (/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80)
+         Compiling indexmap v2.0.0
+         Compiling url v2.5.0
+         Compiling regex-automata v0.4.3
+      error: failed to run custom build command for `pydantic-core v2.16.3 (/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80)`
+      
+      Caused by:
+        process didn't exit successfully: `/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/target/release/build/pydantic-core-6319b9a128525618/build-script-build` (exit status: 101)
+        --- stdout
+        cargo:rustc-cfg=Py_3_6
+        cargo:rustc-cfg=Py_3_7
+        cargo:rustc-cfg=Py_3_8
+        cargo:rustc-cfg=Py_3_9
+        cargo:rustc-cfg=Py_3_10
+        cargo:rustc-cfg=Py_3_11
+        cargo:rustc-cfg=Py_3_12
+        cargo:rustc-cfg=Py_3_13
+        cargo:rerun-if-changed=python/pydantic_core/core_schema.py
+        cargo:rerun-if-changed=generate_self_schema.py
+      
+        --- stderr
+        Traceback (most recent call last):
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 192, in eval_forward_ref
+            return type_._evaluate(core_schema.__dict__, None, set())
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        TypeError: ForwardRef._evaluate() missing 1 required keyword-only argument: 'recursive_guard'
+      
+        During handling of the above exception, another exception occurred:
+      
+        Traceback (most recent call last):
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 240, in <module>
+            main()
+            ~~~~^^
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 210, in main
+            value = get_schema(s, definitions)
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 54, in get_schema
+            return type_dict_schema(obj, definitions)
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 152, in type_dict_schema
+            field_type = eval_forward_ref(field_type)
+          File "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/generate_self_schema.py", line 195, in eval_forward_ref
+            return type_._evaluate(core_schema.__dict__, None)
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        TypeError: ForwardRef._evaluate() missing 1 required keyword-only argument: 'recursive_guard'
+      
+        thread 'main' (1350) panicked at build.rs:29:9:
+        generate_self_schema.py failed with exit status: 1
+        note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `env -u CARGO PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.13-64bit" PYO3_PYTHON="/app/.venv/bin/python" PYTHON_SYS_EXECUTABLE="/app/.venv/bin/python" "cargo" "rustc" "--profile" "release" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "/tmp/pip-install-e5bhqs33/pydantic-core_dfd46486622a48bdbab130abe1a49b80/Cargo.toml" "--lib" "--crate-type" "cdylib"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/app/.venv/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+2026-03-24T21:50:14.957545625Z [inf]    ERROR: Failed building wheel for pydantic-core
+
+2026-03-24T21:50:14.957933779Z [inf]  Failed to build pydantic-core
+
+2026-03-24T21:50:14.959068053Z [inf]  error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> pydantic-core
+
+2026-03-24T21:50:15.562873645Z [err]  pip install -r requirements.txt
+2026-03-24T21:50:15.582695672Z [err]  ERROR: failed to build: failed to solve: process "pip install -r requirements.txt" did not complete successfully: exit code: 1
