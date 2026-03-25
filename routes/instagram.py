@@ -13,7 +13,13 @@ def get_instagram_reels():
     if not token or not bid:
         return {"error": "Instagram not connected."}
 
-    url = f"https://graph.facebook.com/v18.0/{bid}/media"
+    # If manually using an IGAA token, it MUST go through graph.instagram.com
+    if token.startswith("IG"):
+        url = "https://graph.instagram.com/v21.0/me/media"
+    else:
+        # If using standard Facebook OAuth (EAAb), use graph.facebook.com
+        url = f"https://graph.facebook.com/v18.0/{bid}/media"
+        
     params = {
         "fields": "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp",
         "access_token": token,
