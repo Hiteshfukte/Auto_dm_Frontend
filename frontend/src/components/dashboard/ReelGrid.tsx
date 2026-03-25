@@ -57,8 +57,9 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
 
     if (error) {
         return (
-            <div className="text-center p-8 text-red-500 font-bold">
-                <p>{error}</p>
+            <div className="text-center p-10 bg-red-50 rounded-2xl border border-red-100 shadow-sm">
+                <p className="text-red-600 font-bold font-headline">{error}</p>
+                <p className="text-red-500 mt-2 font-medium text-sm">Please verify your Instagram Developer API status.</p>
             </div>
         );
     }

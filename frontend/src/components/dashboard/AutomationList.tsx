@@ -55,9 +55,18 @@ export default function AutomationList() {
 
     if (automations.length === 0) {
         return (
-            <div className="text-center py-20 bg-[#f2f4f6] rounded-3xl border border-[#c3c5d9]/30">
-                <p className="text-[#434656] font-medium mb-4">No active automations. Create one to get started.</p>
-            </div>
+            <section className="bg-[#ffffff] rounded-xl shadow-[0px_20px_40px_rgba(0,104,95,0.08)] overflow-hidden">
+                <div className="px-8 py-6 border-b border-[#e6e8ea] flex justify-between items-center">
+                    <h3 className="text-lg font-bold font-headline text-[#191c1e]">Active Automations</h3>
+                    <button className="text-sm text-[#00685f] font-semibold hover:underline">View All Rules</button>
+                </div>
+                <div className="p-12">
+                    <div className="text-center py-16 bg-[#f7f9fb] rounded-2xl border border-[#c3c5d9]/40 border-dashed">
+                        <p className="text-[#565e74] font-medium mb-2 text-lg">No active automations</p>
+                        <p className="text-[#565e74]/70 text-sm">Select a reel above to create your first trigger.</p>
+                    </div>
+                </div>
+            </section>
         );
     }
 
