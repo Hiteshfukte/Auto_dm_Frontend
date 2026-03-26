@@ -1,11 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Instagram, ArrowRight, Sparkles } from 'lucide-react';
+import { Instagram, ArrowRight, Sparkles, Mail, Lock, UserPlus, LogIn } from 'lucide-react';
 import { createClient } from '@/utils/supabase/client';
-import { API_BASE_URL } from '@/lib/constants';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
+    const router = useRouter();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [mode, setMode] = useState<'signin' | 'signup'>('signin');
+
     const handleGoogleLogin = async () => {
         const supabase = createClient();
         await supabase.auth.signInWithOAuth({
@@ -14,6 +22,38 @@ export default function LoginPage() {
                 redirectTo: `${window.location.origin}/auth/callback`,
             },
         });
+    };
+
+    const handleEmailAuth = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+        const supabase = createClient();
+
+        try {
+            if (mode === 'signin') {
+                const { error } = await supabase.auth.signInWithPassword({
+                    email,
+                    password,
+                });
+                if (error) throw error;
+                router.push('/dashboard');
+            } else {
+                const { error } = await supabase.auth.signUp({
+                    email,
+                    password,
+                    options: {
+                        emailRedirectTo: `${window.location.origin}/auth/callback`,
+                    },
+                });
+                if (error) throw error;
+                setError("Check your email for the confirmation link!");
+            }
+        } catch (err: any) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
     };
     return (
         <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
@@ -66,8 +106,68 @@ export default function LoginPage() {
                         <path fill="#EA4335" d="M12 4.8c1.61 0 3.06.55 4.2 1.63l3.15-3.15C17.45 1.48 14.97 0 12 0 7.23 0 3.15 2.33 1.18 6.49l4.1 2.86C6.22 6.91 8.87 4.8 12 4.8z" />
                     </svg>
                     Continue with Google
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+
+                <div className="relative my-8">
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t border-white/10"></div>
+                    </div>
+                    <div className="relative flex justify-center text-xs uppercase">
+                        <span className="bg-[#0a0a0a] px-4 text-white/30 font-bold tracking-widest">or continue with email</span>
+                    </div>
+                </div>
+
+                <form onSubmit={handleEmailAuth} className="space-y-4">
+                    <div className="relative group">
+                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20 group-focus-within:text-purple-500 transition-colors" />
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full bg-white/[0.03] border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-purple-500/50 focus:bg-white/[0.05] transition-all"
+                            required
+                        />
+                    </div>
+                    <div className="relative group">
+                        <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20 group-focus-within:text-purple-500 transition-colors" />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full bg-white/[0.03] border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-purple-500/50 focus:bg-white/[0.05] transition-all"
+                            required
+                        />
+                    </div>
+
+                    {error && (
+                        <p className={`text-sm font-medium ${error.includes('confirmation') ? 'text-green-400' : 'text-red-400'}`}>
+                            {error}
+                        </p>
+                    )}
+
+                    <button
+                        type="submit"
+                        disabled={loading}
+                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-4 rounded-xl font-bold text-lg hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg shadow-purple-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                    >
+                        {loading ? 'Processing...' : (
+                            <>
+                                {mode === 'signin' ? <LogIn className="w-5 h-5" /> : <UserPlus className="w-5 h-5" />}
+                                {mode === 'signin' ? 'Sign In' : 'Create Account'}
+                            </>
+                        )}
+                    </button>
+                    
+                    <button
+                        type="button"
+                        onClick={() => setMode(mode === 'signin' ? 'signup' : 'signin')}
+                        className="text-white/40 text-sm hover:text-white transition-colors mt-2"
+                    >
+                        {mode === 'signin' ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
+                    </button>
+                </form>
                 
                 <div className="mt-8 pt-6 border-t border-white/10">
                     <p className="text-white/30 text-xs font-medium uppercase tracking-widest">
