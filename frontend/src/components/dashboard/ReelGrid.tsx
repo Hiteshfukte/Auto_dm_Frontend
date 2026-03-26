@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Heart, MessageCircle, Check, Loader2 } from 'lucide-react';
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 
 interface Reel {
     id: string;
@@ -30,7 +30,7 @@ export default function ReelGrid({ onSelectReel, selectedReelId }: ReelGridProps
     useEffect(() => {
         async function fetchReels() {
             try {
-                const res = await fetch(`${API_BASE_URL}/api/instagram/reels`);
+                const res = await apiFetch('/api/instagram/reels');
                 const data = await res.json();
 
                 if (data.error) {

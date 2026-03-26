@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Edit2, Trash2 } from 'lucide-react';
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 import CreateAutomationModal from './CreateAutomationModal';
 
 interface Automation {
@@ -30,7 +30,7 @@ export default function AutomationList() {
 
     const fetchAutomations = async () => {
         try {
-            const res = await fetch(`${API_BASE_URL}/api/automations`);
+            const res = await apiFetch('/api/automations');
             const data = await res.json();
             setAutomations(data);
         } catch (e) {
@@ -42,7 +42,7 @@ export default function AutomationList() {
 
     const handleDelete = async (id: number) => {
         if (!confirm("Are you sure?")) return;
-        await fetch(`${API_BASE_URL}/api/automations/${id}`, { method: 'DELETE' });
+        await apiFetch(`/api/automations/${id}`, { method: 'DELETE' });
         fetchAutomations();
     };
 

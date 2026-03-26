@@ -1,21 +1,22 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from database import get_db
+from services.auth_wrapper import get_supabase_user
 
 router = APIRouter(prefix="/api/stats", tags=["Stats"])
 
 @router.get("")
-def get_stats():
-    """Returns analytics stats for the dashboard."""
+def get_stats(user_id: str = Depends(get_supabase_user)):
+    """Returns analytics stats for the dashboard of the current user."""
     try:
         conn = get_db()
         cursor = conn.cursor()
         
-        # Count sent DMs
-        cursor.execute("SELECT COUNT(*) FROM sent_dms")
+        # Count sent DMs for this user
+        cursor.execute("SELECT COUNT(*) FROM sent_dms WHERE supabase_user_id = ?", (user_id,))
         dms_sent = cursor.fetchone()[0]
         
-        # Count active automations
-        cursor.execute("SELECT COUNT(*) FROM automations WHERE active=1")
+        # Count active automations for this user
+        cursor.execute("SELECT COUNT(*) FROM automations WHERE active=1 AND supabase_user_id = ?", (user_id,))
         active_count = cursor.fetchone()[0]
         
         conn.close()

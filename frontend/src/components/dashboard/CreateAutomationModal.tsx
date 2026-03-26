@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Hash, Link2, Shield, Sparkles } from 'lucide-react';
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 
 interface CreateAutomationModalProps {
     isOpen: boolean;
@@ -65,17 +65,15 @@ export default function CreateAutomationModal({ isOpen, onClose, onCreate, initi
         try {
             let savedAutomation;
             if (initialData?.id) {
-                const res = await fetch(`${API_BASE_URL}/api/automations/${initialData.id}`, {
+                const res = await apiFetch(`/api/automations/${initialData.id}`, {
                     method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
                 if (!res.ok) throw new Error("Update failed");
                 savedAutomation = { ...initialData, ...payload };
             } else {
-                const res = await fetch(`${API_BASE_URL}/api/automations`, {
+                const res = await apiFetch('/api/automations', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
                 if (!res.ok) throw new Error("Create failed");

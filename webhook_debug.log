@@ -1256,3 +1256,27 @@
 >>> GLOBAL LOG: GET /api/automations
 
 >>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: OPTIONS /api/config/status
+
+>>> GLOBAL LOG: OPTIONS /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: OPTIONS /api/instagram/reels
+
+>>> GLOBAL LOG: OPTIONS /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/instagram/reels
+
+>>> GLOBAL LOG: GET /api/automations
+
+>>> GLOBAL LOG: GET /api/config/status
+
+>>> GLOBAL LOG: GET /api/config/status

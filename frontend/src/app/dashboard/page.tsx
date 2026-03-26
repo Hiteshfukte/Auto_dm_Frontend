@@ -6,10 +6,9 @@ import StatsCards from '@/components/dashboard/StatsCards';
 import AutomationList from '@/components/dashboard/AutomationList';
 import ReelGrid from '@/components/dashboard/ReelGrid';
 import CreateAutomationModal from '@/components/dashboard/CreateAutomationModal';
-import ConnectHero from '@/components/dashboard/states/ConnectHero';
+import InstagramWizard from '@/components/dashboard/states/InstagramWizard';
 import FetchReelsCard from '@/components/dashboard/states/FetchReelsCard';
-
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 
 type DashboardState = 'LOADING' | 'NEW_USER' | 'CONNECTED_NO_REELS' | 'ACTIVATION' | 'ACTIVE';
 
@@ -91,7 +90,7 @@ export default function DashboardPage() {
 
     const checkState = async () => {
         try {
-            const statusRes = await fetch(`${API_BASE_URL}/api/config/status`);
+            const statusRes = await apiFetch('/api/config/status');
             const statusData = await statusRes.json();
 
             if (!statusData.instagram_connected) {
@@ -100,7 +99,7 @@ export default function DashboardPage() {
             }
             setIsConnected(true);
 
-            const statsRes = await fetch(`${API_BASE_URL}/api/stats`);
+            const statsRes = await apiFetch('/api/stats');
             const statsData = await statsRes.json();
             setActiveAutomationsCount(statsData.active_automations);
 
@@ -109,7 +108,7 @@ export default function DashboardPage() {
                 return;
             }
 
-            const reelsRes = await fetch(`${API_BASE_URL}/api/instagram/reels`);
+            const reelsRes = await apiFetch('/api/instagram/reels');
             const reelsData = await reelsRes.json();
 
             if (Array.isArray(reelsData) && reelsData.length > 0) {
@@ -166,7 +165,7 @@ export default function DashboardPage() {
             {state !== 'NEW_USER' && <StatsCards />}
 
             {state === 'NEW_USER' && (
-                <ConnectHero />
+                <InstagramWizard onComplete={checkState} />
             )}
 
             {state === 'CONNECTED_NO_REELS' && (

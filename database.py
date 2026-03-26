@@ -13,11 +13,11 @@ def init_db():
     conn = get_db()
     cursor = conn.cursor()
     
-    # Automations table
+    # Automations table (linked to SaaS user)
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS automations (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id TEXT DEFAULT 'default',
+            supabase_user_id TEXT NOT NULL,
             name TEXT,
             keyword TEXT,
             message TEXT,
@@ -34,21 +34,23 @@ def init_db():
     # Gate status for follow gate tracking
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS gate_status (
+            supabase_user_id TEXT,
             user_id TEXT,
             media_id TEXT,
             attempts INTEGER DEFAULT 0,
-            PRIMARY KEY (user_id, media_id)
+            PRIMARY KEY (supabase_user_id, user_id, media_id)
         )
     """)
     
     # Tracking sent DMs to prevent duplicates
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS sent_dms (
+            supabase_user_id TEXT,
             user_id TEXT,
             media_id TEXT,
             automation_id INTEGER,
             timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            PRIMARY KEY (user_id, media_id, automation_id)
+            PRIMARY KEY (supabase_user_id, user_id, media_id, automation_id)
         )
     """)
 
@@ -61,11 +63,13 @@ def init_db():
         )
     """)
 
-    # Persistent configuration (Tokens, IDs)
+    # Persistent configuration (Tokens, IDs) - Isolate by Supabase User
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS config (
-            key TEXT PRIMARY KEY,
-            value TEXT
+            supabase_user_id TEXT,
+            key TEXT,
+            value TEXT,
+            PRIMARY KEY (supabase_user_id, key)
         )
     """)
 

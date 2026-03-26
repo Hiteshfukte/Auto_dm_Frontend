@@ -14,7 +14,7 @@ def instagram_business_login():
     if not app_id:
         return {"error": "FACEBOOK_APP_ID not configured"}
     
-    base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
     redirect_uri = f"{base_url}/api/auth/instagram/callback"
     
     scope = (
@@ -41,7 +41,7 @@ def facebook_login():
     if not app_id:
         return {"error": "FACEBOOK_APP_ID not configured"}
     
-    base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
     redirect_uri = f"{base_url}/api/auth/facebook/callback"
     scope = (
         "instagram_basic,"
@@ -66,7 +66,7 @@ def instagram_callback(code: str):
     """Handles Instagram Business Login callback."""
     app_id = get_config("FACEBOOK_APP_ID")
     app_secret = get_config("FACEBOOK_APP_SECRET")
-    base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
     redirect_uri = f"{base_url}/api/auth/instagram/callback"
 
     if not app_id or not app_secret:
@@ -130,7 +130,7 @@ def facebook_callback(code: str):
     """Handles the OAuth callback, exchanges code for token, and finds the Instagram Business ID."""
     app_id = get_config("FACEBOOK_APP_ID")
     app_secret = get_config("FACEBOOK_APP_SECRET")
-    base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
     redirect_uri = f"{base_url}/api/auth/facebook/callback"
 
     if not app_id or not app_secret:

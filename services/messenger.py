@@ -10,13 +10,12 @@ from config import get_config
 
 INSTAGRAM_BASE_URL = "https://graph.instagram.com/v21.0"
 
-def send_private_reply(comment_id: str, text: str) -> bool:
+def send_private_reply(comment_id: str, text: str, supabase_user_id: str = "legacy_admin") -> bool:
     """
     Sends a PRIVATE REPLY to a comment (DM widget).
-    Endpoint: POST graph.instagram.com/{ig_id}/messages
     """
-    token = get_config("IG_ACCESS_TOKEN")
-    ig_id = get_config("IG_BUSINESS_ID")
+    token = get_config("IG_ACCESS_TOKEN", supabase_user_id)
+    ig_id = get_config("IG_BUSINESS_ID", supabase_user_id)
     
     if not token or not ig_id:
         print("META DM ERROR: Missing IG_ACCESS_TOKEN or IG_BUSINESS_ID")
@@ -55,15 +54,12 @@ def send_private_reply(comment_id: str, text: str) -> bool:
         return False
 
 
-def send_dm(recipient_id: str, text: str) -> bool:
+def send_dm(recipient_id: str, text: str, supabase_user_id: str = "legacy_admin") -> bool:
     """
     Sends a direct message to a user who has ALREADY messaged us (24h window).
-    
-    Endpoint: POST {INSTAGRAM_BASE_URL}/{ig_business_id}/messages
-    Body: { recipient: { id }, message: { text } }
     """
-    token = get_config("IG_ACCESS_TOKEN")
-    ig_id = get_config("IG_BUSINESS_ID")
+    token = get_config("IG_ACCESS_TOKEN", supabase_user_id)
+    ig_id = get_config("IG_BUSINESS_ID", supabase_user_id)
     
     if not token or not ig_id:
         print("META DM ERROR: Missing IG_ACCESS_TOKEN or IG_BUSINESS_ID")
@@ -93,28 +89,24 @@ def send_dm(recipient_id: str, text: str) -> bool:
         return False
 
 
-def send_message(recipient: dict, text: str = None, attachment: dict = None):
+def send_message(recipient: dict, text: str = None, attachment: dict = None, supabase_user_id: str = "legacy_admin"):
     """
     Unified entry point for sending messages.
-    - recipient has 'id' → send DM (user already messaged us)
-    - recipient has 'comment_id' → send private reply to comment
     """
     user_id = recipient.get("id")
     comment_id = recipient.get("comment_id")
     
     if comment_id:
-        # Private reply to a comment (DM widget/banner)
-        return send_private_reply(comment_id, text)
+        return send_private_reply(comment_id, text, supabase_user_id)
     elif user_id:
-        # Direct DM response (within 24h window)
-        return send_dm(user_id, text)
+        return send_dm(user_id, text, supabase_user_id)
     
     return False
 
 
-def send_comment_reply(comment_id: str, text: str):
+def send_comment_reply(comment_id: str, text: str, supabase_user_id: str = "legacy_admin"):
     """Sends a PUBLIC reply to a comment via Facebook Graph API."""
-    token = get_config("IG_ACCESS_TOKEN")
+    token = get_config("IG_ACCESS_TOKEN", supabase_user_id)
     if not token:
         return False
         

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 
 const initialStats = [
     { label: 'Total Automated DMs', value: '-', trend: '+12.5%' },
@@ -17,7 +17,7 @@ export default function StatsCards() {
     useEffect(() => {
         async function fetchStats() {
             try {
-                const res = await fetch(`${API_BASE_URL}/api/stats`);
+                const res = await apiFetch('/api/stats');
                 if (res.ok) {
                     const data = await res.json();
                     setStats([

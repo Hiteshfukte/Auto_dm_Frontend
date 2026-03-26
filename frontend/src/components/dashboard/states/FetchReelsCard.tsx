@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Film, Download, ArrowRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
-import { API_BASE_URL } from '@/lib/constants';
+import { apiFetch } from '@/lib/api';
 
 interface FetchReelsCardProps {
     onFetchComplete: () => void;
@@ -15,7 +15,7 @@ export default function FetchReelsCard({ onFetchComplete }: FetchReelsCardProps)
     const handleFetch = async () => {
         setLoading(true);
         try {
-            const res = await fetch(`${API_BASE_URL}/api/instagram/reels`);
+            const res = await apiFetch('/api/instagram/reels');
             if (res.ok) {
                 const data = await res.json();
                 if (Array.isArray(data) && data.length > 0) {

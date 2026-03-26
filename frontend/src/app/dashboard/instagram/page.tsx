@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Instagram, LogOut, CheckCircle, AlertCircle, ArrowRight, ShieldCheck, Settings } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { apiFetch } from '@/lib/api';
 import { API_BASE_URL } from '@/lib/constants';
 
 export default function InstagramPage() {
@@ -16,7 +17,7 @@ export default function InstagramPage() {
 
     const checkStatus = async () => {
         try {
-            const res = await fetch(`${API_BASE_URL}/api/config/status`);
+            const res = await apiFetch('/api/config/status');
             const data = await res.json();
             if (data.instagram_connected) {
                 setStatus('connected');
@@ -38,7 +39,7 @@ export default function InstagramPage() {
     const handleDisconnect = async () => {
         if (!confirm("Are you sure you want to disconnect? Automations will stop working.")) return;
         try {
-            await fetch(`${API_BASE_URL}/api/config/disconnect`, { method: 'POST' });
+            await apiFetch('/api/config/disconnect', { method: 'POST' });
             await checkStatus();
         } catch (e) {
             console.error(e);
@@ -150,9 +151,8 @@ export default function InstagramPage() {
                         <form onSubmit={async (e) => {
                             e.preventDefault();
                             const formData = new FormData(e.currentTarget);
-                            await fetch(`${API_BASE_URL}/api/config/connect`, {
+                            await apiFetch('/api/config/connect', {
                                 method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({
                                     access_token: formData.get('token'),
                                     business_id: formData.get('bid')

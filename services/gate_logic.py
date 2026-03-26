@@ -10,8 +10,8 @@ import sqlite3
 from services.messenger import send_dm
 
 
-async def handle_message_event(event: dict):
-    """Processes incoming Direct Messages (e.g., 'YES' for follow gate)."""
+async def handle_message_event(event: dict, supabase_user_id: str = "legacy_admin"):
+    """Processes incoming Direct Messages (e.g., 'YES' for follow gate) for a specific owner."""
     sender_id = event.get("sender", {}).get("id")
     msg_data = event.get("message", {})
     
@@ -23,27 +23,26 @@ async def handle_message_event(event: dict):
     
     keywords = ["yes", "info", "start"]
     if text in keywords:
-        # Find the most recent Reel this user is trying to get a resource for
-        media_id = get_latest_pending_gate_media(sender_id)
+        # Find the most recent Reel this user is trying to get a resource for (per owner)
+        media_id = get_latest_pending_gate_media(supabase_user_id, sender_id)
         if not media_id:
-            # We don't know what they want. Just ignore or send a generic help message.
             return
             
-        await process_follow_check(sender_id, media_id)
+        await process_follow_check(sender_id, media_id, supabase_user_id)
 
 
-async def process_follow_check(sender_id: str, media_id: str):
-    """Handles the follow gate logic."""
-    attempts = get_gate_status(sender_id, media_id) or 0
+async def process_follow_check(sender_id: str, media_id: str, supabase_user_id: str = "legacy_admin"):
+    """Handles the follow gate logic for a specific SaaS owner."""
+    attempts = get_gate_status(supabase_user_id, sender_id, media_id) or 0
     
-    # Get the automation rule
+    # Get the automation rule for this owner
     conn = sqlite3.connect("bot.db")
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     if media_id == "generic":
-        cursor.execute("SELECT * FROM automations WHERE (media_id IS NULL OR media_id = '') AND active=1 ORDER BY id DESC LIMIT 1")
+        cursor.execute("SELECT * FROM automations WHERE supabase_user_id=? AND (media_id IS NULL OR media_id = '') AND active=1 ORDER BY id DESC LIMIT 1", (supabase_user_id,))
     else:
-        cursor.execute("SELECT * FROM automations WHERE media_id=? AND active=1", (media_id,))
+        cursor.execute("SELECT * FROM automations WHERE supabase_user_id=? AND media_id=? AND active=1", (supabase_user_id, media_id))
     rule = cursor.fetchone()
     conn.close()
     
@@ -52,16 +51,17 @@ async def process_follow_check(sender_id: str, media_id: str):
 
     if attempts < 1:
         # First "YES" — Ask to confirm follow
-        oops_msg = "😅 Oops! Please make sure you are following @star__media_, then reply YES again to get the link!"
-        send_dm(sender_id, oops_msg)
-        update_gate_status(sender_id, media_id, 1)
+        profile_url = "https://www.instagram.com/star__media_/" # TODO: Make dynamic from owner config
+        oops_msg = f"😅 Oops! Please make sure you are following our page, then reply YES again to get the link!"
+        send_dm(sender_id, oops_msg, supabase_user_id)
+        update_gate_status(supabase_user_id, sender_id, media_id, 1)
     else:
         # Second "YES" — Send the goods!
         msg = rule["message"]
         if rule["link"]:
             msg += f"\n\n🔗 {rule['link']}"
             
-        success = send_dm(sender_id, msg)
+        success = send_dm(sender_id, msg, supabase_user_id)
         if success:
-            update_gate_status(sender_id, media_id, 2)  # 2 = Completed
-            mark_dm_as_sent(sender_id, media_id)
+            update_gate_status(supabase_user_id, sender_id, media_id, 2)  # 2 = Completed
+            mark_dm_as_sent(supabase_user_id, sender_id, media_id, rule["id"])

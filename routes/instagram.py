@@ -1,14 +1,15 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 import requests
 from config import get_config
+from services.auth_wrapper import get_supabase_user
 
 router = APIRouter(prefix="/api/instagram", tags=["Instagram"])
 
 @router.get("/reels")
-def get_instagram_reels():
-    """Fetches the latest media (Reels) from the connected Instagram account."""
-    token = get_config("IG_ACCESS_TOKEN")
-    bid = get_config("IG_BUSINESS_ID")
+def get_instagram_reels(user_id: str = Depends(get_supabase_user)):
+    """Fetches the latest media (Reels) from the connected Instagram account for the user."""
+    token = get_config("IG_ACCESS_TOKEN", user_id)
+    bid = get_config("IG_BUSINESS_ID", user_id)
     
     if not token or not bid:
         return {"error": "Instagram not connected."}

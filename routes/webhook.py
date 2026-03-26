@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request, Response
 from fastapi.responses import PlainTextResponse
 import os
-from config import get_config
+from config import get_config, get_supabase_user_by_business_id
 from services.comment_handler import handle_comment_event
 from services.gate_logic import handle_message_event
 import traceback
@@ -41,11 +41,15 @@ async def receive_events(request: Request):
             return {"status": "ignored"}
             
         for entry in data["entry"]:
+            # Identify the owner of this specific Instagram Business ID
+            ig_id = entry.get("id")
+            supabase_user_id = get_supabase_user_by_business_id(ig_id) or "legacy_admin"
+            
             # Handle Comments (IG 'media' object changes)
             if "changes" in entry:
                 for change in entry["changes"]:
                     if change.get("field") == "comments":
-                        await handle_comment_event(change.get("value"))
+                        await handle_comment_event(change.get("value"), supabase_user_id)
             
             # Handle Direct Messages (Phase 6)
             elif "messaging" in entry:
@@ -56,7 +60,7 @@ async def receive_events(request: Request):
                         continue
                         
                     if "text" in message:
-                        await handle_message_event(event)
+                        await handle_message_event(event, supabase_user_id)
                 
     except Exception as e:
         error_msg = f"Webhook Processing Error: {str(e)}\n{traceback.format_exc()}"

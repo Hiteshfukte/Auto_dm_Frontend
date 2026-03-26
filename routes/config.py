@@ -1,15 +1,16 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from config import get_config, set_config, delete_config
 from models import ConnectRequest
+from services.auth_wrapper import get_supabase_user
 import requests
 
 router = APIRouter(prefix="/api/config", tags=["Configuration"])
 
 @router.get("/status")
-def get_config_status():
-    """Checks if Instagram is connected."""
-    token = get_config("IG_ACCESS_TOKEN")
-    bid = get_config("IG_BUSINESS_ID")
+def get_config_status(user_id: str = Depends(get_supabase_user)):
+    """Checks if Instagram is connected for the current user."""
+    token = get_config("IG_ACCESS_TOKEN", user_id)
+    bid = get_config("IG_BUSINESS_ID", user_id)
     connected = bool(token and bid)
     
     # Static profile URL for now
@@ -22,10 +23,10 @@ def get_config_status():
     }
 
 @router.get("/permissions")
-def check_token_permissions():
-    """Debug: Check what permissions the current token has."""
-    token = get_config("IG_ACCESS_TOKEN")
-    bid = get_config("IG_BUSINESS_ID")
+def check_token_permissions(user_id: str = Depends(get_supabase_user)):
+    """Debug: Check what permissions the current user's token has."""
+    token = get_config("IG_ACCESS_TOKEN", user_id)
+    bid = get_config("IG_BUSINESS_ID", user_id)
     
     if not token:
         return {"error": "No access token found. Please login first."}
@@ -49,14 +50,15 @@ def check_token_permissions():
     }
 
 @router.post("/connect")
-def connect_instagram(data: ConnectRequest):
-    """Manually connects Instagram by saving token and ID."""
-    set_config("IG_ACCESS_TOKEN", data.access_token)
-    set_config("IG_BUSINESS_ID", data.business_id)
+def connect_instagram(data: ConnectRequest, user_id: str = Depends(get_supabase_user)):
+    """Manually connects Instagram by saving token and ID for the user."""
+    set_config("IG_ACCESS_TOKEN", data.access_token, user_id)
+    set_config("IG_BUSINESS_ID", data.business_id, user_id)
     return {"status": "connected"}
 
 @router.post("/disconnect")
-def disconnect_instagram():
-    """Disconnects Instagram by clearing tokens from the database."""
-    delete_config("IG_BUSINESS_ID")
+def disconnect_instagram(user_id: str = Depends(get_supabase_user)):
+    """Disconnects Instagram for the current user."""
+    delete_config("IG_BUSINESS_ID", user_id)
+    delete_config("IG_ACCESS_TOKEN", user_id)
     return {"status": "disconnected"}
